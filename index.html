@@ -565,7 +565,7 @@ footer .grid span:last-child{grid-column:7/13;justify-self:end}
     <div class="wrap grid contact">
       <div class="sh"><p><span class="dot"></span>Contact</p><p>New projects</p></div>
       <h2>Tell us about <span class="it">your project.</span></h2>
-      <form id="cf" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate><input type="hidden" name="form-name" value="contact"><p hidden><label>Leave empty<input name="bot-field"></label></p>
+      <form id="cf" name="contact" method="POST" novalidate><input type="hidden" name="form-name" value="contact"><p hidden><label>Leave empty<input name="bot-field"></label></p>
         <label>Name<input id="c-name" name="name" autocomplete="name"></label>
         <label>Email<input id="c-email" name="email" type="email" autocomplete="email"></label>
         <label>Service<select id="c-svc" name="service"><option>Renovation</option><option>Architecture</option><option>Interior Design</option><option>Project Management</option><option>Design Consulting</option><option>Complete Project</option></select></label>
@@ -896,8 +896,11 @@ document.getElementById('cf').addEventListener('submit',function(e){
   if(!n||!/.+@.+\..+/.test(m)){note.textContent=es?'Por favor agrega tu nombre y correo.':'Please add your name and email.';return;}
   var btn=f.querySelector('button[type=submit]');btn.disabled=true;
   note.textContent=es?'Enviando…':'Sending…';
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-  .then(function(r){if(!r.ok) throw 0; f.reset(); note.textContent=es?('Gracias, '+n.split(' ')[0]+'. Recibimos tu consulta y te responderemos pronto.'):('Thank you, '+n.split(' ')[0]+'. We received your enquiry and will be in touch soon.');})
+  var v=function(id){return document.getElementById(id).value.trim();};
+  if(f.querySelector('[name=bot-field]').value){return;}
+  fetch('https://formsubmit.co/ajax/gabriel@metstudio.us',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({_subject:'New MET Studio enquiry from '+n,_template:'table',_replyto:m,name:n,email:m,service:v('c-svc'),location:v('c-loc'),message:v('c-msg')})})
+  .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=='true') throw 0;});})
+  .then(function(){ f.reset(); note.textContent=es?('Gracias, '+n.split(' ')[0]+'. Recibimos tu consulta y te responderemos pronto.'):('Thank you, '+n.split(' ')[0]+'. We received your enquiry and will be in touch soon.');})
   .catch(function(){note.textContent=es?'No se pudo enviar. Escríbenos a gabriel@metstudio.us.':'It could not be sent. Please email gabriel@metstudio.us.';})
   .finally(function(){btn.disabled=false;});
 });
