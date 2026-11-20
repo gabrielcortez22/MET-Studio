@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MET Studio | Architecture, Interior Design &amp; Renovations in Miami</title>
+<meta name="description" content="MET Studio designs and builds private homes in South Florida: architecture, interior design, extensive renovations, project management and design consulting.">
+<meta property="og:title" content="MET Studio">
+<meta property="og:description" content="Architecture, Interior Design and extensive renovations, drawn and built by one studio. Miami, FL.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/img/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%23000%27/%3E%3Crect x=%2716%27 y=%2716%27 width=%278%27 height=%2732%27 fill=%27%23fff%27/%3E%3Crect x=%2728%27 y=%2716%27 width=%278%27 height=%2719%27 fill=%27%23fff%27/%3E%3Crect x=%2740%27 y=%2716%27 width=%278%27 height=%2732%27 fill=%27%23fff%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..700&family=Newsreader:ital,opsz,wght@1,6..72,300&display=swap">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* Layout: Swiss 12-column grid, Milanese restraint. One grotesk in two widths, one ochre mark, captions like a monograph. */
+:root{
+  --bg:#F6F6F3;
+  --ink:#121212;
+  --grey:#6F6F6A;
+  --hair:#D8D8D2;
+  --tile:#E9E8E3;
+  --ochre:#A8742A;
+  --sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Newsreader",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121211;--ink:#EDEDE8;--grey:#9A9A93;--hair:#2C2C2A;--tile:#1C1C1A;--ochre:#D29A4A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121211;--ink:#EDEDE8;--grey:#9A9A93;--hair:#2C2C2A;--tile:#1C1C1A;--ochre:#D29A4A;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;font-variation-settings:"wdth" 100}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1360px;margin:0 auto;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+h1,h2,h3,p{margin:0}
+h1,h2{font-weight:500;letter-spacing:-.025em;text-wrap:balance;font-variation-settings:"wdth" 112}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:1.5px solid var(--ochre);outline-offset:3px}
+.cap{font-size:12px;color:var(--grey);letter-spacing:.01em}
+.it{font-family:var(--serif);font-style:italic;font-weight:300;letter-spacing:0}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ochre);margin-right:8px;vertical-align:1px}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg)}
+header .grid{padding-block:20px;align-items:baseline;font-size:13px}
+.logo{grid-column:1/5;font-size:clamp(22px,2.4vw,30px);line-height:1;font-weight:600;letter-spacing:-.01em;font-variation-settings:"wdth" 112;white-space:nowrap}
+.logo{display:flex;align-items:baseline;gap:.4em}
+.logo .mark{width:auto;height:.72em;fill:currentColor;flex:none;display:block}
+.logo .wm span{font-weight:600;color:var(--grey);font-size:1em}
+header nav{grid-column:5/11;display:flex;gap:0;align-items:center;justify-self:end}
+header nav a{padding-inline:16px;line-height:1;white-space:nowrap}
+header nav a+a{border-left:1px solid color-mix(in srgb,var(--ink) 45%,transparent)}
+header nav a{color:var(--grey)}
+header nav a:hover{color:var(--ink)}
+.lang{grid-column:11/13;justify-self:end;display:flex;align-items:baseline;gap:18px;white-space:nowrap}
+.lang a.cta{border-bottom:1px solid var(--ink);padding-bottom:1px}
+.lsw{display:flex;align-items:baseline;gap:4px;color:var(--grey);font-size:12px}
+.lsw .lb{font:inherit;font-size:12px;background:none;border:0;padding:4px 2px;color:var(--grey);cursor:pointer;letter-spacing:.06em}
+.lsw .lb:hover{background:none;color:var(--ink)}
+.lsw .lb.on{color:var(--ink);font-weight:600}
+.mbtn{display:none}
+@media (max-width:820px){header nav{display:none}.logo{grid-column:1/8}.lang{grid-column:8/13}}
+@media (max-width:820px){
+ .lang a.cta{display:none}
+ .mbtn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14px;color:var(--ink);background:none;border:1px solid var(--hair);padding:10px 12px;min-height:44px;cursor:pointer}
+ .mbtn:hover{background:none;border-color:var(--ink)}
+ .mb-ico{position:relative;width:16px;height:10px;border-top:1.5px solid currentColor;border-bottom:1.5px solid currentColor;box-sizing:border-box}
+ .mb-ico::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:1.5px solid currentColor;transform:translateY(-50%)}
+ header.open .mb-ico{border-color:transparent}
+ header.open .mb-ico::after{transform:translateY(-50%) rotate(45deg)}
+ header.open .mb-ico::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:1.5px solid currentColor;transform:translateY(-50%) rotate(-45deg)}
+ header.open nav{display:flex;grid-column:1/13;flex-direction:column;align-items:stretch;justify-self:stretch;margin-top:16px;border-top:1px solid var(--ink);max-height:calc(100vh - 120px);overflow-y:auto}
+ header.open nav a{padding:16px 0;font-size:18px;color:var(--ink);line-height:1.2}
+ header.open nav a+a{border-left:0;border-top:1px solid var(--hair)}
+}
+
+.hero{padding-block:96px 56px}
+.hero h1{grid-column:1/11;font-size:clamp(36px,5.4vw,80px);line-height:1.12;letter-spacing:-.005em}
+.hero h1 .it{font-size:1.04em}
+.hero .meta{grid-column:1/13;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;margin-top:72px;border-top:1px solid var(--ink);padding-top:16px}
+.hero .meta div{grid-column:span 3;font-size:13px}
+.hero .meta div p:first-child{color:var(--grey);margin-bottom:4px}
+@media (max-width:820px){.hero{padding-block:56px 40px}.hero h1{grid-column:1/13}.hero .meta{row-gap:18px;margin-top:44px}.hero .meta div{grid-column:span 6}}
+
+/* plates: material images standing in for photography */
+.plates{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:14px;padding-bottom:110px}
+.plate{position:relative;max-width:100%}
+.plate .img{width:100%;max-width:100%}
+.plate figcaption{margin-top:10px;display:flex;justify-content:space-between;gap:12px}
+.plate img.img{display:block;object-fit:cover;background:var(--tile)}
+.p1{grid-column:1/13}.p1 .img{aspect-ratio:3/2;max-height:88vh;width:100%}
+.p2{grid-column:1/6;margin-top:40px}.p2 .img{aspect-ratio:4/5;object-position:44% 50%}
+.plate3{grid-column:6/13;margin-top:40px;align-self:end}.plate3 .img{aspect-ratio:16/10;object-position:40% 50%}
+.row img.sw{object-fit:cover;display:block}
+figure{margin:0}
+@media (max-width:820px){.p1,.p2,.plate3{grid-column:1/13;margin-top:0}.plates{padding-bottom:64px;row-gap:28px}}
+
+.m-plaster{background:radial-gradient(110% 80% at 25% 20%,#EDE8DF,#D7CFC2 55%,#C2B8A8)}
+.m-oak{background:repeating-linear-gradient(90deg,#D8C3A2 0 3px,#CDB590 3px 7px,#DCC8A8 7px 9px,#C7AE87 9px 15px)}
+.m-walnut{background:repeating-linear-gradient(92deg,#5A3E2B 0 4px,#4A3122 4px 9px,#634531 9px 11px,#3F2A1D 11px 18px)}
+.m-taj{background:linear-gradient(120deg,#F1EBE1 0 28%,#E2D3BE 36%,#F3EEE6 46%,#D9C7AE 58%,#EEE6DA 72%,#E5D9C7)}
+.m-trav{background:repeating-linear-gradient(0deg,#DCD3C3 0 6px,#D2C7B4 6px 8px,#E2DACB 8px 15px,#CFC3AE 15px 16px)}
+.m-green{background:linear-gradient(180deg,#5C7A60,#3D5C47 60%,#2E4A3A)}
+
+section{padding-block:100px;border-top:1px solid var(--hair)}
+.sh{grid-column:1/4;font-size:13px}
+.sh p+p{color:var(--grey);margin-top:4px}
+.sh .meet{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:1px}
+.sh .meet:hover{color:var(--ochre);border-color:var(--ochre)}
+@media (max-width:820px){section{padding-block:64px}.sh{grid-column:1/13;margin-bottom:28px}}
+
+/* studio statement */
+.statement{grid-column:4/12;font-size:clamp(24px,2.7vw,38px);line-height:1.22;letter-spacing:-.015em;font-weight:400;font-variation-settings:"wdth" 104;text-wrap:pretty}
+.statement .mute{color:var(--grey)}
+.disc{grid-column:4/13;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;row-gap:40px;margin-top:72px}
+/* project management */
+.pm-lede{grid-column:4/12;font-size:clamp(22px,2.3vw,32px);line-height:1.25;letter-spacing:-.012em;font-variation-settings:"wdth" 104;text-wrap:pretty}
+.pm-lede .mute{color:var(--grey)}
+.pm{grid-column:4/13;margin-top:56px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px;row-gap:0}
+.pm div{border-top:1px solid var(--hair);padding-block:16px;display:grid;gap:6px;align-content:start}
+.pm h3{font-size:15px;font-weight:600}
+.pm p{font-size:13.5px;color:var(--grey);max-width:36ch;text-align:left}
+.pm-lede{text-align:left}
+.who{grid-column:4/13;margin-top:40px;display:flex;flex-wrap:wrap;gap:10px 28px;font-size:13px;border-top:1px solid var(--ink);padding-top:14px}
+.who span{color:var(--grey)}
+@media (max-width:820px){.pm-lede,.pm,.who{grid-column:1/13}.pm{grid-template-columns:1fr}}
+.disc div{border-top:1px solid var(--ink);padding-top:14px;display:grid;gap:10px;align-content:start}
+.disc h3{font-size:15px;font-weight:600}
+.disc p{color:var(--grey);font-size:14px;max-width:34ch}
+@media (max-width:820px){.statement,.disc{grid-column:1/13}.disc{grid-template-columns:1fr;row-gap:28px;margin-top:44px}}
+
+/* project register */
+.reg{grid-column:4/13}
+.reg-head,.row{display:grid;grid-template-columns:56px minmax(0,2.4fr) minmax(0,1.6fr) minmax(0,1.2fr) 90px;column-gap:20px;align-items:baseline}
+.reg-head{font-size:12px;color:var(--grey);padding-bottom:10px;border-bottom:1px solid var(--ink)}
+.row{padding-block:18px;border-bottom:1px solid var(--hair);cursor:default;position:relative}
+.row .no{font-size:12px;color:var(--grey);font-variant-numeric:tabular-nums}
+.row .ti{font-size:clamp(18px,1.8vw,24px);font-weight:500;letter-spacing:-.01em;font-variation-settings:"wdth" 108}
+.row .ty,.row .lo{font-size:13px;color:var(--grey)}
+.row .sw{height:26px;width:90px}
+.row:hover .ti{color:var(--ochre)}
+.row img.sw{height:44px;width:90px}
+.row .desc{grid-column:2/6;font-size:14px;color:var(--grey);max-width:68ch;margin-top:8px}
+@media (max-width:820px){.reg{grid-column:1/13}.reg-head{display:none}.row{grid-template-columns:40px minmax(0,1fr) 64px;row-gap:4px}.row .ty,.row .lo{grid-column:2}.row .sw{grid-column:3;grid-row:1;width:64px}.row .desc{grid-column:2/4}}
+
+
+.row{text-decoration:none}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filters .f{font:inherit;font-size:13px;background:transparent;color:var(--ink);border:1px solid var(--hair);padding:7px 14px;cursor:pointer}
+.filters .f:hover{background:transparent;border-color:var(--ink)}
+.filters .f.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pjs{display:grid;gap:96px;padding-top:96px}
+.pj{display:grid;gap:22px}
+.pj-h{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:baseline;border-top:1px solid var(--ink);padding-top:14px}
+.pj-h .no{grid-column:1/4;font-size:12px;color:var(--grey);font-variant-numeric:tabular-nums}
+.pj-t{grid-column:4/10;display:grid;gap:4px}
+.pj-t h3{font-size:clamp(26px,3.2vw,44px);font-weight:500;letter-spacing:-.02em;line-height:1.05;font-variation-settings:"wdth" 112}
+.pj-t p{font-size:14px;color:var(--grey)}
+.pj-d{grid-column:10/13;justify-self:end;text-align:right;font-size:12px;color:var(--ochre)}
+.g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(120px,15vw,250px);gap:10px}
+.g img{width:100%;height:100%;max-width:100%;object-fit:cover;display:block;background:var(--tile)}
+.g img:first-child{grid-column:span 2;grid-row:span 2}
+.g.n2 img{grid-column:span 2;grid-row:span 2}
+.g.n3 img:not(:first-child){grid-column:span 2}
+.g.n4 img:nth-child(2){grid-column:span 2}
+.pj-b{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.pj-b p{grid-column:4/10;font-size:15px;color:var(--grey);max-width:66ch}
+.pj-b dl{grid-column:10/13;margin:0;display:grid;gap:10px;justify-self:end;text-align:right}
+.pj-b dt{font-size:11px;color:var(--grey)}
+.pj-b dd{margin:0;font-weight:500;font-variant-numeric:tabular-nums}
+.pj[hidden],.row[hidden]{display:none!important}
+/* projects: all text aligned to the left edge */
+#projects .sh{grid-column:1/13;margin-bottom:32px}
+#projects .reg{grid-column:1/13}
+.pj-h{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.pj-h .no,.pj-t,.pj-d{grid-column:auto;justify-self:start;text-align:left}
+.pj-d{margin-top:4px}
+.pj-b p{grid-column:1/9;text-align:left}
+.pj-b dl{grid-column:10/13;justify-self:start;text-align:left}
+@media (max-width:820px){
+ .pjs{gap:64px;padding-top:56px}
+ .pj-h .no{grid-column:1/13}.pj-t{grid-column:1/13}.pj-d{grid-column:1/13;justify-self:start;text-align:left;margin-top:6px}
+ .g{grid-template-columns:1fr 1fr;grid-auto-rows:clamp(110px,34vw,200px)}
+ .g img,.g.n3 img:not(:first-child),.g.n4 img:nth-child(2){grid-column:span 1;grid-row:span 1}
+ .g img:first-child,.g.n2 img{grid-column:span 2;grid-row:span 2}
+ .g img:last-child:nth-child(even){grid-column:span 2}
+ .g.n2 img:last-child{grid-row:span 2}
+ .pj-b p,.pj-b dl{grid-column:1/13}.pj-b dl{justify-self:start;text-align:left;grid-auto-flow:column;gap:24px;margin-top:16px}
+}
+
+
+/* project cards + project pages */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:72px 24px;padding-top:88px}
+.card{display:grid;gap:16px;align-content:start}
+.card[hidden]{display:none!important}
+.cover{position:relative;display:block;overflow:hidden;background:var(--tile)}
+.cover img{display:block;width:100%;max-width:100%;aspect-ratio:3/2;object-fit:cover;transition:transform .6s ease}
+.cover:hover img{transform:scale(1.025)}
+.cover .open{position:absolute;left:12px;bottom:12px;font-size:12px;background:var(--bg);color:var(--ink);padding:6px 10px}
+.card-t{display:grid;gap:4px}
+.card-t .no{font-size:12px;color:var(--grey)}
+.card-t h3{font-size:clamp(22px,2.4vw,32px);font-weight:500;letter-spacing:-.015em;font-variation-settings:"wdth" 110}
+.card-t h3 a:hover{color:var(--ochre)}
+.card-t p{font-size:14px;color:var(--grey)}
+.card .pj-d{font-size:12px;color:var(--ochre);text-align:left}
+@media (max-width:820px){.cards{grid-template-columns:1fr;gap:56px;padding-top:56px}}
+.pv{padding-block:28px 96px}
+.back{font-size:13px;color:var(--grey)}
+.back:hover{color:var(--ink)}
+.pv-h{display:grid;gap:8px;margin-top:48px;border-top:1px solid var(--ink);padding-top:16px}
+.pv-h .no{font-size:12px;color:var(--grey);font-variant-numeric:tabular-nums}
+.pv-h h1{font-size:clamp(40px,7vw,104px);line-height:.98}
+.pv-sub{font-size:16px;color:var(--grey)}
+.pv .pj-d{font-size:13px;color:var(--ochre)}
+.pv-b{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;margin-top:36px}
+.pv-b p{grid-column:1/8;font-size:17px;line-height:1.6;color:var(--grey);max-width:64ch}
+.pv-b dl{grid-column:9/13;margin:0;display:grid;grid-template-columns:repeat(2,max-content);gap:20px 40px;align-content:start}
+.pv-b dl div:first-child{grid-column:1/-1}
+.pv-b dt{font-size:11px;color:var(--grey)}
+.pv-b dd{margin:2px 0 0;font-size:19px;font-weight:500;font-variant-numeric:tabular-nums}
+.pv-imgs{display:grid;gap:40px;margin-top:64px}
+.pv-imgs figure{margin:0;display:grid;gap:10px}
+.pv-imgs img{display:block;width:100%;max-width:100%;height:auto;max-height:92vh;object-fit:contain;object-position:left center;background:var(--tile)}
+.pv-nav{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:end;margin-top:88px;border-top:1px solid var(--ink);padding-top:18px}
+.pv-nav a{display:grid;gap:4px;font-size:clamp(18px,2vw,26px);font-weight:500;letter-spacing:-.01em}
+.pv-nav a:hover{color:var(--ochre)}
+.pv-nav .all{font-size:13px;font-weight:400;color:var(--grey);align-self:center}
+.pv-nav .nx{text-align:right;justify-self:end}
+@media (max-width:820px){.pv-b p,.pv-b dl{grid-column:1/13}.pv-b dl{margin-top:20px}.pv-imgs{gap:24px;margin-top:40px}.pv-nav{grid-template-columns:1fr 1fr}.pv-nav .all{display:none}}
+
+
+/* who we are */
+.team-lede{grid-column:4/12;font-size:clamp(22px,2.3vw,32px);line-height:1.25;letter-spacing:-.012em;font-variation-settings:"wdth" 104}
+.team-lede .mute{color:var(--grey)}
+.team{grid-column:4/13;margin-top:56px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 24px}
+.person{border-top:1px solid var(--ink);padding-top:16px;display:grid;gap:12px;align-content:start;min-width:0}
+.person .init{width:56px;height:56px;display:grid;place-items:center;background:var(--tile);font-size:16px;font-weight:600;letter-spacing:.04em}
+.person h3{font-size:clamp(18px,1.6vw,22px);font-weight:500;letter-spacing:-.01em;font-variation-settings:"wdth" 108}
+.person .role{font-size:13px;color:var(--ochre);margin-top:2px}
+.person .focus{font-size:14px;color:var(--grey)}
+.person .em{font-size:13px}
+@media (max-width:1080px){.team{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:820px){.team-lede,.team{grid-column:1/13}.team{margin-top:36px}}
+@media (max-width:480px){.team{grid-template-columns:1fr}}
+
+.team-page .tp{margin-top:40px}
+.team-page .team-lede{grid-column:1/13;text-align:justify;text-wrap:wrap}
+.team-page .team{grid-column:1/13;margin-top:64px}
+.team-page .person .init{width:100%;height:auto;aspect-ratio:4/5;font-size:28px}
+
+.person .bio{display:grid;gap:10px;border-top:1px solid var(--hair);padding-top:12px}
+.person .bio p{font-size:13.5px;line-height:1.6;color:var(--grey)}
+.person .spec-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.person .spec-list li{font-size:12px;border:1px solid var(--hair);padding:4px 8px}
+
+.person img.photo{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center center;max-width:100%}
+
+.pm.pm-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:820px){.pm.pm-2{grid-template-columns:1fr}}
+
+.brands{grid-column:4/13;margin-top:56px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--ink);border-left:1px solid var(--hair)}
+.brand{display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:150px;padding:20px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);box-sizing:border-box;min-width:0}
+.brand .bn{font-size:clamp(18px,1.7vw,24px);font-weight:500;letter-spacing:-.01em;font-variation-settings:"wdth" 112}
+.brand .bc{font-size:12px;color:var(--grey)}
+.brand:hover .bn{color:var(--ochre)}
+@media (max-width:980px){.brands{grid-template-columns:repeat(2,minmax(0,1fr));grid-column:1/13}}
+
+/* project reel */
+#reel{border-top:0;padding-block:0 100px}
+.reel{position:relative;aspect-ratio:16/9;max-height:88vh;width:100%;max-width:100%;overflow:hidden;background:var(--tile)}
+.reel .slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;color:#fff;pointer-events:none}
+.reel .slide.on{opacity:1;pointer-events:auto}
+.reel .slide img{width:100%;height:100%;object-fit:cover;display:block;max-width:100%}
+.reel .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,0) 45%)}
+.reel .cap-box{position:absolute;left:28px;bottom:26px;right:200px;z-index:1;display:grid;gap:4px}
+.reel .cap-box .no{font-size:12px;opacity:.8;font-variant-numeric:tabular-nums}
+.reel .cap-box .ti{font-size:clamp(24px,3.2vw,44px);font-weight:500;letter-spacing:-.02em;line-height:1.05;font-variation-settings:"wdth" 112}
+.reel .cap-box .ty{font-size:14px;opacity:.85}
+.reel .cap-box .go{font-size:13px;margin-top:6px;opacity:.9}
+.reel .slide:hover .go{text-decoration:underline}
+.reel-ui{position:absolute;right:20px;bottom:22px;z-index:2;display:flex;align-items:center;gap:10px}
+.rbtn{width:44px;height:44px;display:grid;place-items:center;background:rgba(0,0,0,.35);color:#fff;border:1px solid rgba(255,255,255,.45);padding:0;cursor:pointer}
+.rbtn:hover{background:rgba(0,0,0,.6)}
+.dots{display:flex;gap:6px}
+.dotb{width:8px;height:8px;border-radius:50%;padding:0;border:0;background:rgba(255,255,255,.45);cursor:pointer}
+.dotb:hover{background:rgba(255,255,255,.8)}
+.dotb.on{background:#fff}
+@media (max-width:820px){.reel{aspect-ratio:1/1;max-height:none}.reel .cap-box{left:16px;right:16px;bottom:72px}.reel-ui{left:16px;right:16px;bottom:16px;justify-content:space-between}.dots{flex-wrap:wrap;justify-content:center}#reel{padding-block:0 64px}}
+@media (prefers-reduced-motion:reduce){.reel .slide{transition:none}}
+
+/* in progress */
+#now{padding-block:0 100px;border-top:0}
+.rec{display:inline-block;width:9px;height:9px;border-radius:50%;background:#E0261B;margin-right:8px;vertical-align:1px;animation:rec 1.2s ease-in-out infinite}
+@keyframes rec{0%,100%{opacity:1}50%{opacity:.15}}
+.now{grid-column:4/13;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:32px;align-items:end;border-top:1px solid var(--ink);padding-top:20px}
+.now-img{margin:0;position:relative}
+.now-img img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;max-width:100%}
+.now-img .live{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;letter-spacing:.12em;padding:6px 10px}
+.now-t{display:grid;gap:8px;align-content:end}
+.now-stage{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#E0261B}
+.now-t h3{font-size:clamp(26px,3vw,40px);font-weight:500;letter-spacing:-.02em;line-height:1.05;font-variation-settings:"wdth" 112}
+.now-loc{font-size:14px;color:var(--grey)}
+.now-d{font-size:15px;color:var(--grey);max-width:44ch;margin-top:8px}
+@media (max-width:820px){.now{grid-column:1/13;grid-template-columns:1fr;gap:20px}#now{padding-block:0 64px}}
+@media (prefers-reduced-motion:reduce){.rec{animation:none}}
+
+/* method */
+.method{grid-column:4/13;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:24px}
+.method div{display:grid;gap:8px;align-content:start}
+.method span{font-size:12px;color:var(--ochre);font-variant-numeric:tabular-nums}
+.method h3{font-size:15px;font-weight:600}
+.method p{font-size:13.5px;color:var(--grey)}
+@media (max-width:980px){.method{grid-column:1/13;grid-template-columns:1fr 1fr;row-gap:32px}}
+
+/* contact */
+.contact h2{grid-column:4/13;font-size:clamp(36px,5vw,72px);line-height:1}
+.cinfo{grid-column:4/7;margin-top:56px;display:grid;gap:18px;font-size:14px;align-content:start}
+.cinfo p.l{color:var(--grey);font-size:12px}
+form{grid-column:4/13;margin-top:56px;display:grid;grid-template-columns:1fr 1fr;column-gap:24px;row-gap:26px}
+form .full{grid-column:1/-1}
+label{display:grid;gap:4px;font-size:12px;color:var(--grey)}
+input,select,textarea{font:inherit;font-size:16px;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--ink);border-radius:0;padding:8px 0;width:100%}
+textarea{min-height:90px;resize:vertical}
+#c-svc{background:#2E2E2C;color:#FFFFFF;border:0;padding:10px 12px;cursor:pointer;color-scheme:dark}
+#c-svc option{background:#2E2E2C;color:#FFFFFF}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--ochre)}
+button{font:inherit;font-size:14px;font-weight:500;background:var(--ink);color:var(--bg);border:0;padding:14px 26px;cursor:pointer}
+button:hover{background:var(--ochre)}
+#c-note{font-size:13px;color:var(--ochre)}
+@media (max-width:820px){.contact h2,.cinfo,form{grid-column:1/13}form{grid-template-columns:1fr;margin-top:36px}.cinfo{margin-top:36px}}
+
+footer .grid{padding-block:28px 36px;font-size:12px;color:var(--grey);border-top:1px solid var(--hair)}
+footer .grid span:first-child{grid-column:1/7}
+footer .grid span:last-child{grid-column:7/13;justify-self:end}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap grid">
+    <a class="logo" translate="no" href="#top" aria-label="MET Studio, home"><svg class="mark" viewBox="0 0 203 202" aria-hidden="true" focusable="false"><rect x="0" y="0" width="40" height="202"/><rect x="82" y="0" width="40" height="120"/><rect x="163" y="0" width="40" height="202"/></svg><span class="wm">MET <span>Studio</span></span></a>
+    <nav aria-label="Main" id="mainnav"><a href="#studio">Studio</a><a href="#projects">Projects</a><a href="#management">Management</a><a href="#consulting">Consulting</a><a href="#method">Method</a><a href="#team">Who we are</a><a href="#contact">Contact</a></nav>
+    <div class="lang"><div class="lsw" role="group" aria-label="Language"><button type="button" class="lb on" data-l="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" class="lb" data-l="es" aria-pressed="false">ES</button></div><a class="cta" href="#contact">Start a project</a><button type="button" class="mbtn" id="mbtn" aria-expanded="false" aria-controls="mainnav"><span class="mb-ico" aria-hidden="true"></span><span>Menu</span></button></div>
+  </div>
+</header>
+
+<main id="top" lang="en">
+  <div class="wrap">
+    <div class="grid hero">
+      <h1>Architecture, Interior Design and extensive renovations, <span class="it">drawn and built</span> by one studio.</h1>
+      <div class="meta">
+        <div><p>Studio</p><p>Miami, Florida</p></div>
+        <div><p>Disciplines</p><p>Architecture, Extensive Interior &amp; Exterior Renovations, Interiors, <span style="white-space:nowrap">Project Management</span></p></div>
+        <div><p>Work</p><p>Private residences, $6–45MM</p></div>
+        <div><p>Enquiries</p><p><a href="#contact">Book a site visit →</a></p></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="reel" aria-label="Project slideshow">
+    <div class="wrap">
+      <div class="reel" id="reelbox">
+        <a class="slide on" href="#13155-keystone" aria-hidden="false" tabindex="0">
+          <img src="img/p/p26-2.jpg" alt="13155 Keystone Ter" >
+          <span class="cap-box"><span class="no">01 / 11</span><span class="ti">13155 Keystone Ter</span><span class="ty">Exterior &amp; interior renovation — Keystone Islands, North Miami</span><span class="go">View project →</span></span>
+        </a>
+<a class="slide" href="#2091-nw-14" aria-hidden="true" tabindex="-1">
+          <img src="img/p/nw14-1.jpg" alt="2091 NW 14 St" >
+          <span class="cap-box"><span class="no">02 / 11</span><span class="ti">2091 NW 14 St</span><span class="ty">Interior renovation — Miami</span><span class="go">View project →</span></span>
+        </a>
+<a class="slide" href="#3871-le-jeune" aria-hidden="true" tabindex="-1">
+          <img src="img/p/lj-3.jpg" alt="3871 Le Jeune Rd" loading="lazy" >
+          <span class="cap-box"><span class="no">03 / 11</span><span class="ti">3871 Le Jeune Rd</span><span class="ty">Exterior &amp; interior renovation, proposal — Coral Gables, Miami</span><span class="go">View project →</span></span>
+        </a>
+<a class="slide" href="#85-west-shore" aria-hidden="true" tabindex="-1">
+          <img src="img/p/ws-1.jpg" alt="85 West Shore Dr" loading="lazy" >
+          <span class="cap-box"><span class="no">04 / 11</span><span class="ti">85 West Shore Dr</span><span class="ty">Contemporary single-family residence — Coconut Grove, Miami</span><span class="go">View project →</span></span>
+        </a>
+<a class="slide" href="#3871-le-jeune-ii" aria-hidden="true" tabindex="-1">
+          <img src="img/p/lj2-8.jpg" alt="3871 Le Jeune Rd II" loading="lazy" >
+          <span class="cap-box"><span class="no">05 / 11</span><span class="ti">3871 Le Jeune Rd II</span><span class="ty">Residential expansion — second story addition — Coral Gables, Miami</span><span class="go">View project →</span></span>
+        </a>
+<a class="slide" href="#3515-fairview" aria-hidden="true" tabindex="-1">
+          <img src="img/p/fv-3.jpg" alt="3515 E Fairview St" loading="lazy" >
+          <span class="cap-box"><span class="no">06 / 11</span><span class="ti">3515 E Fairview St</span><span class="ty">Renovation &amp; new addition — Coconut Grove, Miami</span><span class="go">View project →</span></span>
+        </a>
+<a class="slide" href="#3515-fairview-kitchen" aria-hidden="true" tabindex="-1">
+          <img src="img/p/fv-k1.jpg" alt="3515 E Fairview St Kitchen" loading="lazy" >
+          <span class="cap-box"><span class="no">07 / 11</span><span class="ti">3515 E Fairview St Kitchen</span><span class="ty">Custom kitchen millwork — Coconut Grove, Miami</span><span class="go">View project →</span></span>
+        </a>
+<a class="slide" href="#1916-sw-12" aria-hidden="true" tabindex="-1">
+          <img src="img/p/sw12-street.jpg" alt="1916 SW 12 Ave" loading="lazy" >
+          <span class="cap-box"><span class="no">08 / 11</span><span class="ti">1916 SW 12 Ave</span><span class="ty">Contemporary residence, proposal — Coral Gables, Miami</span><span class="go">View project →</span></span>
+        </a>
+<a class="slide" href="#11220-nw-43" aria-hidden="true" tabindex="-1">
+          <img src="img/p/p28-2.jpg" alt="11220 NW 43 Ter" loading="lazy" >
+          <span class="cap-box"><span class="no">09 / 11</span><span class="ti">11220 NW 43 Ter</span><span class="ty">Custom vanity millwork &amp; stone work — Doral, Miami</span><span class="go">View project →</span></span>
+        </a>
+<a class="slide" href="#park-grove" aria-hidden="true" tabindex="-1">
+          <img src="img/p/pg-1.jpg" alt="Park Grove Residences" loading="lazy" >
+          <span class="cap-box"><span class="no">10 / 11</span><span class="ti">Park Grove Residences</span><span class="ty">Master bathroom design — Coconut Grove, Miami</span><span class="go">View project →</span></span>
+        </a>
+<a class="slide" href="#guaparo" aria-hidden="true" tabindex="-1">
+          <img src="img/p/p33-1.jpg" alt="Guaparo Residence" loading="lazy" >
+          <span class="cap-box"><span class="no">11 / 11</span><span class="ti">Guaparo Residence</span><span class="ty">Contemporary residence, proposal — Valencia, Venezuela</span><span class="go">View project →</span></span>
+        </a>
+        <div class="reel-ui">
+          <button type="button" class="rbtn" id="rprev" aria-label="Previous project"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <div class="dots"><button type="button" class="dotb on" aria-label="13155 Keystone Ter" data-i="0"></button><button type="button" class="dotb" aria-label="2091 NW 14 St" data-i="1"></button><button type="button" class="dotb" aria-label="3871 Le Jeune Rd" data-i="2"></button><button type="button" class="dotb" aria-label="85 West Shore Dr" data-i="3"></button><button type="button" class="dotb" aria-label="3871 Le Jeune Rd II" data-i="4"></button><button type="button" class="dotb" aria-label="3515 E Fairview St" data-i="5"></button><button type="button" class="dotb" aria-label="3515 E Fairview St Kitchen" data-i="6"></button><button type="button" class="dotb" aria-label="1916 SW 12 Ave" data-i="7"></button><button type="button" class="dotb" aria-label="11220 NW 43 Ter" data-i="8"></button><button type="button" class="dotb" aria-label="Park Grove Residences" data-i="9"></button><button type="button" class="dotb" aria-label="Guaparo Residence" data-i="10"></button></div>
+          <button type="button" class="rbtn" id="rnext" aria-label="Next project"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="now" aria-label="Project in progress">
+    <div class="wrap grid">
+      <div class="sh"><p><span class="rec" aria-hidden="true"></span>In progress</p><p>Right now at the studio</p></div>
+      <article class="now">
+        <figure class="now-img"><img src="img/p/wip-3201.jpg" alt="Aerial view of the existing residence at 6201 SW 120th Ave, Pinecrest" loading="lazy"><span class="live"><span class="rec" aria-hidden="true"></span>REC · LIVE</span></figure>
+        <div class="now-t">
+          <p class="now-stage">Design Stage</p>
+          <h3>6201 SW 120th Ave</h3>
+          <p class="now-loc">Pinecrest, Miami</p>
+          <p class="now-d">We are currently developing the design for this Pinecrest residence. Follow along as the project moves from the existing house to a new vision.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="studio">
+    <div class="wrap grid">
+      <div class="sh"><p><span class="dot"></span>Studio</p><p>About MET Studio</p><p><a class="meet" href="#team">Meet the team →</a></p></div>
+      <p class="statement">MET Studio designs and builds private homes in South Florida. <span class="mute">We draw the plans, write the finish schedule, and run the site ourselves, so the details in the render are the details on the wall.</span></p>
+      <div class="disc">
+        <div><h3>Architecture</h3><p>New residences, additions and complete re-plans. Façades, renders and permit drawings, designed with flood-zone conditions in mind.</p></div>
+        <div><h3>Renovation</h3><p>Structure, MEP coordination, millwork and finishes, managed on site daily from submittals to the final punch list.</p></div>
+        <div><h3>Interiors</h3><p>Extensive experience with very high-end finishes, including stone work, millwork, and plumbing and electrical fixtures. We consult from concept to final installation.</p></div>
+        <div><h3>Project Management</h3><p>On-site project management for designers and contractors: we run the schedule, the trades and the paperwork so their design gets built as drawn.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap grid">
+      <div class="sh"><p><span class="dot"></span>Projects</p><p>11 projects, Miami and Venezuela</p></div>
+      <div class="reg">
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" class="f on" data-f="all">All</button>
+          <button type="button" class="f" data-f="pm">Project Management</button>
+          <button type="button" class="f" data-f="new">Architecture – New Construction</button>
+          <button type="button" class="f" data-f="reno">Architecture – Extensive Renovation</button>
+          <button type="button" class="f" data-f="fab">Design &amp; Fabrication</button>
+        </div>
+        <div class="reg-head"><span>No.</span><span>Address</span><span>Project</span><span>Location</span><span></span></div>
+        <a class="row" href="#13155-keystone" data-cat="pm"><span class="no">001</span><span class="ti">13155 Keystone Ter</span><span class="ty">Exterior &amp; interior renovation</span><span class="lo">Keystone Islands, North Miami</span><img class="sw" src="img/p/p26-2.jpg" alt="" loading="lazy"></a>
+<a class="row" href="#2091-nw-14" data-cat="arch reno"><span class="no">002</span><span class="ti">2091 NW 14 St</span><span class="ty">Interior renovation</span><span class="lo">Miami</span><img class="sw" src="img/p/nw14-1.jpg" alt="" loading="lazy"></a>
+<a class="row" href="#3871-le-jeune" data-cat="arch reno"><span class="no">003</span><span class="ti">3871 Le Jeune Rd</span><span class="ty">Exterior &amp; interior renovation, proposal</span><span class="lo">Coral Gables, Miami</span><img class="sw" src="img/p/lj-3.jpg" alt="" loading="lazy"></a>
+<a class="row" href="#85-west-shore" data-cat="arch reno"><span class="no">004</span><span class="ti">85 West Shore Dr</span><span class="ty">Contemporary single-family residence</span><span class="lo">Coconut Grove, Miami</span><img class="sw" src="img/p/ws-1.jpg" alt="" loading="lazy"></a>
+<a class="row" href="#3871-le-jeune-ii" data-cat="arch reno"><span class="no">005</span><span class="ti">3871 Le Jeune Rd II</span><span class="ty">Residential expansion — second story addition</span><span class="lo">Coral Gables, Miami</span><img class="sw" src="img/p/lj2-8.jpg" alt="" loading="lazy"></a>
+<a class="row" href="#3515-fairview" data-cat="arch reno"><span class="no">006</span><span class="ti">3515 E Fairview St</span><span class="ty">Renovation &amp; new addition</span><span class="lo">Coconut Grove, Miami</span><img class="sw" src="img/p/fv-3.jpg" alt="" loading="lazy"></a>
+<a class="row" href="#3515-fairview-kitchen" data-cat="fab"><span class="no">007</span><span class="ti">3515 E Fairview St Kitchen</span><span class="ty">Custom kitchen millwork</span><span class="lo">Coconut Grove, Miami</span><img class="sw" src="img/p/fv-k1.jpg" alt="" loading="lazy"></a>
+<a class="row" href="#1916-sw-12" data-cat="arch new"><span class="no">008</span><span class="ti">1916 SW 12 Ave</span><span class="ty">Contemporary residence, proposal</span><span class="lo">Coral Gables, Miami</span><img class="sw" src="img/p/sw12-street.jpg" alt="" loading="lazy"></a>
+<a class="row" href="#11220-nw-43" data-cat="fab"><span class="no">009</span><span class="ti">11220 NW 43 Ter</span><span class="ty">Custom vanity millwork &amp; stone work</span><span class="lo">Doral, Miami</span><img class="sw" src="img/p/p28-2.jpg" alt="" loading="lazy"></a>
+<a class="row" href="#park-grove" data-cat="int"><span class="no">010</span><span class="ti">Park Grove Residences</span><span class="ty">Master bathroom design</span><span class="lo">Coconut Grove, Miami</span><img class="sw" src="img/p/pg-1.jpg" alt="" loading="lazy"></a>
+<a class="row" href="#guaparo" data-cat="arch new"><span class="no">011</span><span class="ti">Guaparo Residence</span><span class="ty">Contemporary residence, proposal</span><span class="lo">Valencia, Venezuela</span><img class="sw" src="img/p/p33-1.jpg" alt="" loading="lazy"></a>
+      </div>
+    </div>
+    <div class="wrap cards">
+      <article class="card" data-cat="pm">
+  <a class="cover" href="#13155-keystone"><img src="img/p/p26-2.jpg" alt="13155 Keystone Ter, Exterior and interior renovation" loading="lazy"><span class="open">View project · 4 images →</span></a>
+  <div class="card-t"><span class="no">001</span><h3><a href="#13155-keystone">13155 Keystone Ter</a></h3><p>Exterior &amp; interior renovation — Keystone Islands, North Miami</p><p class="pj-d">Project Management</p></div>
+</article>
+<article class="card" data-cat="arch reno">
+  <a class="cover" href="#2091-nw-14"><img src="img/p/nw14-1.jpg" alt="2091 NW 14 St, Interior renovation" loading="lazy"><span class="open">View project · 5 images →</span></a>
+  <div class="card-t"><span class="no">002</span><h3><a href="#2091-nw-14">2091 NW 14 St</a></h3><p>Interior renovation — Miami</p><p class="pj-d">Architecture · Extensive Renovation</p></div>
+</article>
+<article class="card" data-cat="arch reno">
+  <a class="cover" href="#3871-le-jeune"><img src="img/p/lj-3.jpg" alt="3871 Le Jeune Rd, Exterior and interior renovation, proposal" loading="lazy"><span class="open">View project · 4 images →</span></a>
+  <div class="card-t"><span class="no">003</span><h3><a href="#3871-le-jeune">3871 Le Jeune Rd</a></h3><p>Exterior &amp; interior renovation, proposal — Coral Gables, Miami</p><p class="pj-d">Architecture · Extensive Renovation</p></div>
+</article>
+<article class="card" data-cat="arch reno">
+  <a class="cover" href="#85-west-shore"><img src="img/p/ws-1.jpg" alt="85 West Shore Dr, Contemporary single-family residence" loading="lazy"><span class="open">View project · 3 images →</span></a>
+  <div class="card-t"><span class="no">004</span><h3><a href="#85-west-shore">85 West Shore Dr</a></h3><p>Contemporary single-family residence — Coconut Grove, Miami</p><p class="pj-d">Architecture · Extensive Renovation</p></div>
+</article>
+<article class="card" data-cat="arch reno">
+  <a class="cover" href="#3871-le-jeune-ii"><img src="img/p/lj2-8.jpg" alt="3871 Le Jeune Rd II, Residential expansion — second story addition" loading="lazy"><span class="open">View project · 8 images →</span></a>
+  <div class="card-t"><span class="no">005</span><h3><a href="#3871-le-jeune-ii">3871 Le Jeune Rd II</a></h3><p>Residential expansion — second story addition — Coral Gables, Miami</p><p class="pj-d">Architecture · Extensive Renovation</p></div>
+</article>
+<article class="card" data-cat="arch reno">
+  <a class="cover" href="#3515-fairview"><img src="img/p/fv-3.jpg" alt="3515 E Fairview St, Renovation and new addition" loading="lazy"><span class="open">View project · 7 images →</span></a>
+  <div class="card-t"><span class="no">006</span><h3><a href="#3515-fairview">3515 E Fairview St</a></h3><p>Renovation &amp; new addition — Coconut Grove, Miami</p><p class="pj-d">Architecture · Extensive Renovation</p></div>
+</article>
+<article class="card" data-cat="fab">
+  <a class="cover" href="#3515-fairview-kitchen"><img src="img/p/fv-k1.jpg" alt="3515 E Fairview St Kitchen, Custom kitchen millwork" loading="lazy"><span class="open">View project · 6 images →</span></a>
+  <div class="card-t"><span class="no">007</span><h3><a href="#3515-fairview-kitchen">3515 E Fairview St Kitchen</a></h3><p>Custom kitchen millwork — Coconut Grove, Miami</p><p class="pj-d">Design, Fabrication &amp; Installation</p></div>
+</article>
+<article class="card" data-cat="arch new">
+  <a class="cover" href="#1916-sw-12"><img src="img/p/sw12-street.jpg" alt="1916 SW 12 Ave, Contemporary residence, proposal" loading="lazy"><span class="open">View project · 12 images →</span></a>
+  <div class="card-t"><span class="no">008</span><h3><a href="#1916-sw-12">1916 SW 12 Ave</a></h3><p>Contemporary residence, proposal — Coral Gables, Miami</p><p class="pj-d">Architecture · New Construction</p></div>
+</article>
+<article class="card" data-cat="fab">
+  <a class="cover" href="#11220-nw-43"><img src="img/p/p28-2.jpg" alt="11220 NW 43 Ter, Custom vanity millwork and stone work" loading="lazy"><span class="open">View project · 3 images →</span></a>
+  <div class="card-t"><span class="no">009</span><h3><a href="#11220-nw-43">11220 NW 43 Ter</a></h3><p>Custom vanity millwork &amp; stone work — Doral, Miami</p><p class="pj-d">Design, Fabrication &amp; Installation</p></div>
+</article>
+<article class="card" data-cat="int">
+  <a class="cover" href="#park-grove"><img src="img/p/pg-1.jpg" alt="Park Grove Residences, Master bathroom design" loading="lazy"><span class="open">View project · 3 images →</span></a>
+  <div class="card-t"><span class="no">010</span><h3><a href="#park-grove">Park Grove Residences</a></h3><p>Master bathroom design — Coconut Grove, Miami</p><p class="pj-d">Interior Design</p></div>
+</article>
+<article class="card" data-cat="arch new">
+  <a class="cover" href="#guaparo"><img src="img/p/p33-1.jpg" alt="Guaparo Residence, Contemporary residence, proposal" loading="lazy"><span class="open">View project · 4 images →</span></a>
+  <div class="card-t"><span class="no">011</span><h3><a href="#guaparo">Guaparo Residence</a></h3><p>Contemporary residence, proposal — Valencia, Venezuela</p><p class="pj-d">Architecture · New Construction</p></div>
+</article>
+    </div>
+  </section>
+
+  <section id="management">
+    <div class="wrap grid">
+      <div class="sh"><p><span class="dot"></span>Project Management</p><p>For designers and contractors</p></div>
+      <p class="pm-lede">We provide Construction Management for Designers, Architects and Contractors. <span class="mute">We are on site 100% of the time, as the single point of coordination between the client and the trades, so the approved design is what gets built.</span></p>
+      <div class="pm">
+        <div><h3>Project Management</h3><p>From preconstruction to turnover: scope, budgets, schedules, procurement and subcontractor buyout, then daily coordination of the trades, cost tracking and change orders.</p></div>
+        <div><h3>Construction Administration</h3><p>Submittals, RFIs, change orders, schedule and cost control within a design-build model, with one point of accountability.</p></div>
+        <div><h3>Quality Control</h3><p>Material and submittal review, mockup approvals, inspections at key stages and system testing, through to the final punch list.</p></div>
+        <div><h3>Layout &amp; Millwork Design</h3><p>Space plans and custom millwork with full shop drawings for cabinetry, closets, wall paneling and built-ins, coordinated with finishes, appliances and lighting.</p></div>
+        <div><h3>MEP Coordination</h3><p>MEP specifications prepared with vendors and subcontractors, so every installation is done right the first time.</p></div>
+        <div><h3>Experience</h3><p>Up to 30 subcontractors coordinated at once on projects from $1.2MM to $35MM.</p></div>
+      </div>
+      <div class="who"><span>Who we work with</span><b>Owners</b><b>Investors</b><b>Developers</b><b>Architects</b><b>Interior Designers</b><b>General Contractors</b></div>
+    </div>
+  </section>
+
+  <section id="consulting">
+    <div class="wrap grid">
+      <div class="sh"><p><span class="dot"></span>Design Consulting</p></div>
+      <p class="pm-lede">We offer Design Consultation for Owners, Designers and Builders. <span class="mute">We help choose every fixture, finish and piece of furniture so it looks right, works right and fits each project.</span></p>
+      <div class="pm pm-2">
+        <div><h3>Plumbing Design Consultation</h3><p>Fixture selection, finishes and layouts for kitchens and baths, matched to the design and to how each space will be used.</p></div>
+        <div><h3>Electrical &amp; Lighting Design Consultation</h3><p>Lighting layouts, fixture selection, switching and outlet placement planned around the architecture and the furniture.</p></div>
+        <div><h3>Wall Finishes Design Consultation</h3><p>Guidance in choosing wall finishes, from plaster and paint to stone, wood and paneling, with samples and options presented for each space.</p></div>
+        <div><h3>Furniture Selection</h3><p>An experienced eye for choosing the right pieces for each project, balancing scale, materials and comfort so every room feels complete.</p></div>
+        <div><h3>Technical Coordination</h3><p>Specifications reviewed with suppliers and installers so rough-in locations and dimensions are right before walls are closed.</p></div>
+        <div><h3>Concept to Installation</h3><p>Support from the first selections through final installation, so the finished result matches what was approved.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="method">
+    <div class="wrap grid">
+      <div class="sh"><p><span class="dot"></span>Method</p><p>Five stages</p></div>
+      <div class="method">
+        <div><span>1</span><h3>Visit</h3><p>We walk the property and agree scope, budget and goals.</p></div>
+        <div><span>2</span><h3>Design</h3><p>Plans, elevations and renders, refined with you.</p></div>
+        <div><span>3</span><h3>Specify</h3><p>Finish schedule, MEP, permits and shop drawings.</p></div>
+        <div><span>4</span><h3>Build</h3><p>Daily site supervision and weekly reports.</p></div>
+        <div><span>5</span><h3>Deliver</h3><p>Punch list, walk-through and handover.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap grid contact">
+      <div class="sh"><p><span class="dot"></span>Contact</p><p>New projects</p></div>
+      <h2>Tell us about <span class="it">your project.</span></h2>
+      <form id="cf" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate><input type="hidden" name="form-name" value="contact"><p hidden><label>Leave empty<input name="bot-field"></label></p>
+        <label>Name<input id="c-name" name="name" autocomplete="name"></label>
+        <label>Email<input id="c-email" name="email" type="email" autocomplete="email"></label>
+        <label>Service<select id="c-svc" name="service"><option>Renovation</option><option>Architecture</option><option>Interior Design</option><option>Project Management</option><option>Design Consulting</option><option>Complete Project</option></select></label>
+        <label>Location<input id="c-loc" name="location"></label>
+        <label class="full">Project<textarea id="c-msg" name="message"></textarea></label>
+        <div class="full" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap"><button type="submit">Send enquiry</button><span id="c-note" hidden></span></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="pv team-page" id="team" hidden>
+  <div class="wrap">
+    <a class="back" href="#top">← Home</a>
+    <div class="pv-h">
+      <span class="no">MET Studio</span>
+      <h1>Who we are</h1>
+    </div>
+    <div class="grid tp">
+      <p class="team-lede">MET Studio brings Architects, Designers and Construction Management under one roof. <span class="mute">The same team draws the plans, renders the spaces and runs the site, from the first sketch to the last finish.</span></p>
+      <div class="team">
+        <article class="person">
+          <img class="init photo" src="img/team-gabriel.jpg" alt="Gabriel Cortez">
+          <div class="p-t"><h3>Gabriel Cortez</h3><p class="role">Senior Architect &amp; Interior Designer</p></div>
+          <p class="focus">Architecture &amp; Project Management</p>
+          <div class="bio">
+            <p>A graduate of the Faculty of Architecture at the Central University of Venezuela in Caracas, Gabriel has a deep background in Architecture and Urban Planning and has focused on Residential Architecture and Construction for the last 20 years, with extensive experience in large-scale millwork manufacturing and installation for some of the most prestigious real estate developers.</p>
+            <p>He bridges Design and Construction, guiding each project from early planning to final handover as the single point of contact between client and builders, and makes sure every detail is built as designed, on schedule and to the highest standard.</p>
+          </div>
+          <p class="em">gabriel@metstudio.us</p>
+        </article>
+        <article class="person">
+          <img class="init photo" src="img/team-nathalia.jpg" alt="Nathalia Galindo">
+          <div class="p-t"><h3>Nathalia Galindo</h3><p class="role">Senior Architect &amp; Interior Designer</p></div>
+          <p class="focus">Interiors &amp; Materials Selection</p>
+          <div class="bio">
+            <p>Nathalia is an Architectural Designer with over six years of experience shaping residential and commercial spaces, with a focus on interiors. Raised in Caracas, Venezuela, she creates spaces rich in texture and character, where beauty and function work together.</p>
+            <p>She leads Space Planning, Material Selection and Design Development, working closely with vendors and builders so every space is carefully resolved from concept to completion.</p>
+          </div>
+          <p class="em">nathalia@metstudio.us</p>
+        </article>
+        <article class="person">
+          <img class="init photo" src="img/team-damian.jpg" alt="Damian Castillo">
+          <div class="p-t"><h3>Damian Castillo</h3><p class="role">Senior Architect</p></div>
+          <p class="focus">Architecture &amp; Pre-Construction</p>
+          <div class="bio">
+            <p>Trained as an architect at the Central University of Venezuela's Faculty of Architecture in Caracas, Damian brings extensive experience in Residential Architecture and Project Management, guiding homes from design through the start of construction.</p>
+            <p>He specializes in MEP Pre-Conceptualization and Pre-Construction, planning mechanical, electrical and plumbing systems from the earliest design stages so every project moves into construction well coordinated and ready to build.</p>
+          </div>
+          <p class="em">damian@metstudio.us</p>
+        </article>
+        <article class="person">
+          <img class="init photo" src="img/team-ernesto.jpg" alt="Ernesto Van Der Dijs">
+          <div class="p-t"><h3>Ernesto Van Der Dijs</h3><p class="role">Senior Architect</p></div>
+          <p class="focus">3D Modeling, CGI Visualization &amp; AI Conceptualization</p>
+          <div class="bio">
+            <p>Ernesto leads the studio's 3D Modeling and Visualization phase, turning plans into detailed digital models and photorealistic CGI renderings of every space. He earned his degree at the Faculty of Architecture of the Central University of Venezuela in Caracas.</p>
+            <p>Using AI Conceptualization to explore design options quickly, he helps clients see and refine their project before construction begins, so every decision is made with confidence.</p>
+          </div>
+          <p class="em">ernesto@metstudio.us</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- project views -->
+<div class="pv" id="13155-keystone" hidden>
+  <div class="wrap">
+    <a class="back" href="#projects">← All projects</a>
+    <div class="pv-h">
+      <span class="no">001 / 011</span>
+      <h1>13155 Keystone Ter</h1>
+      <p class="pv-sub">Exterior &amp; interior renovation — Keystone Islands, North Miami</p>
+      <p class="pj-d">Project Management</p>
+    </div>
+    <div class="pv-b"><p>Extensive renovation in Keystone Islands: new subfloor layers, a re-planned partition layout with new framing, Venetian plaster, white oak floors and custom millwork in every room. Custom closets, furniture and architectural lighting were coordinated throughout.</p><dl><div><dt>General Contractor</dt><dd>NIMBLE Construction</dd></div><div><dt>Interior Designer</dt><dd>Kevin Gray Design</dd></div><div><dt>Senior Interior Designer</dt><dd>Shawn Clarke</dd></div></dl></div>
+    <div class="pv-imgs"><figure><img src="img/p/p26-2.jpg" alt="13155 Keystone Ter, view 1" loading="lazy"><figcaption class="cap">13155 Keystone Ter — 1 / 4</figcaption></figure><figure><img src="img/p/p26-1.jpg" alt="13155 Keystone Ter, view 2" loading="lazy"><figcaption class="cap">13155 Keystone Ter — 2 / 4</figcaption></figure><figure><img src="img/p/p26-3.jpg" alt="13155 Keystone Ter, view 3" loading="lazy"><figcaption class="cap">13155 Keystone Ter — 3 / 4</figcaption></figure><figure><img src="img/p/p26-4.jpg" alt="13155 Keystone Ter, view 4" loading="lazy"><figcaption class="cap">13155 Keystone Ter — 4 / 4</figcaption></figure></div>
+    <nav class="pv-nav" aria-label="More projects">
+      <a href="#guaparo"><span class="cap">Previous</span>Guaparo Residence</a>
+      <a href="#projects" class="all">All projects</a>
+      <a href="#2091-nw-14" class="nx"><span class="cap">Next</span>2091 NW 14 St</a>
+    </nav>
+  </div>
+</div>
+<div class="pv" id="2091-nw-14" hidden>
+  <div class="wrap">
+    <a class="back" href="#projects">← All projects</a>
+    <div class="pv-h">
+      <span class="no">002 / 011</span>
+      <h1>2091 NW 14 St</h1>
+      <p class="pv-sub">Interior renovation — Miami</p>
+      <p class="pj-d">Architecture · Extensive Renovation</p>
+    </div>
+    <div class="pv-b"><p>An extensive renovation with a complete redesign of the layout, adding more bedrooms to the property. Large-format stone slab walls with bold veining, walnut wall paneling and a vertical slat screen frame the new living and dining areas, with linear recessed lighting and polished stone floors throughout. The open plan connects to a planted garden through a full-height slatted opening.</p><dl><div><dt>Architecture</dt><dd>MET Studio</dd></div></dl></div>
+    <div class="pv-imgs"><figure><img src="img/p/nw14-1.jpg" alt="2091 NW 14 St, view 1" loading="lazy"><figcaption class="cap">2091 NW 14 St — 1 / 5</figcaption></figure><figure><img src="img/p/nw14-plan1.jpg" alt="2091 NW 14 St, view 2" loading="lazy"><figcaption class="cap">2091 NW 14 St — 2 / 5</figcaption></figure><figure><img src="img/p/nw14-plan2.jpg" alt="2091 NW 14 St, view 3" loading="lazy"><figcaption class="cap">2091 NW 14 St — 3 / 5</figcaption></figure><figure><img src="img/p/nw14-2.jpg" alt="2091 NW 14 St, view 4" loading="lazy"><figcaption class="cap">2091 NW 14 St — 4 / 5</figcaption></figure><figure><img src="img/p/nw14-3.jpg" alt="2091 NW 14 St, view 5" loading="lazy"><figcaption class="cap">2091 NW 14 St — 5 / 5</figcaption></figure></div>
+    <nav class="pv-nav" aria-label="More projects">
+      <a href="#13155-keystone"><span class="cap">Previous</span>13155 Keystone Ter</a>
+      <a href="#projects" class="all">All projects</a>
+      <a href="#3871-le-jeune" class="nx"><span class="cap">Next</span>3871 Le Jeune Rd</a>
+    </nav>
+  </div>
+</div>
+<div class="pv" id="3871-le-jeune" hidden>
+  <div class="wrap">
+    <a class="back" href="#projects">← All projects</a>
+    <div class="pv-h">
+      <span class="no">003 / 011</span>
+      <h1>3871 Le Jeune Rd</h1>
+      <p class="pv-sub">Exterior &amp; interior renovation, proposal — Coral Gables, Miami</p>
+      <p class="pj-d">Architecture · Extensive Renovation</p>
+    </div>
+    <div class="pv-b"><p>A complete transformation of an existing house: new layout, new finishes throughout, and a new exterior on every façade. Stone paving and wood decking around the pool, and a pergola over a new barbecue area.</p></div>
+    <div class="pv-imgs"><figure><img src="img/p/lj-3.jpg" alt="3871 Le Jeune Rd, view 1" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd — 1 / 4</figcaption></figure><figure><img src="img/p/lj-4.jpg" alt="3871 Le Jeune Rd, view 2" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd — 2 / 4</figcaption></figure><figure><img src="img/p/lj-2.jpg" alt="3871 Le Jeune Rd, view 3" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd — 3 / 4</figcaption></figure><figure><img src="img/p/lj-1.jpg" alt="3871 Le Jeune Rd, view 4" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd — 4 / 4</figcaption></figure></div>
+    <nav class="pv-nav" aria-label="More projects">
+      <a href="#2091-nw-14"><span class="cap">Previous</span>2091 NW 14 St</a>
+      <a href="#projects" class="all">All projects</a>
+      <a href="#85-west-shore" class="nx"><span class="cap">Next</span>85 West Shore Dr</a>
+    </nav>
+  </div>
+</div>
+<div class="pv" id="85-west-shore" hidden>
+  <div class="wrap">
+    <a class="back" href="#projects">← All projects</a>
+    <div class="pv-h">
+      <span class="no">004 / 011</span>
+      <h1>85 West Shore Dr</h1>
+      <p class="pv-sub">Contemporary single-family residence — Coconut Grove, Miami</p>
+      <p class="pj-d">Architecture · Extensive Renovation</p>
+    </div>
+    <div class="pv-b"><p>A contemporary residence composed of crisp white volumes framing warm wood paneling. A double-height wood entry door sits beside a vertical slat screen, the ground floor is clad in natural stone with clerestory windows, and a glass-railed balcony opens the upper level to the garden. Large-format pavers set in lawn lead through layered tropical landscaping to the entry.</p><dl><div><dt>Architecture</dt><dd>MET Studio</dd></div></dl></div>
+    <div class="pv-imgs"><figure><img src="img/p/ws-1.jpg" alt="85 West Shore Dr, view 1" loading="lazy"><figcaption class="cap">85 West Shore Dr — 1 / 3</figcaption></figure><figure><img src="img/p/ws-2.jpg" alt="85 West Shore Dr, view 2" loading="lazy"><figcaption class="cap">85 West Shore Dr — 2 / 3</figcaption></figure><figure><img src="img/p/lj-5.jpg" alt="85 West Shore Dr, view 3" loading="lazy"><figcaption class="cap">85 West Shore Dr — 3 / 3</figcaption></figure></div>
+    <nav class="pv-nav" aria-label="More projects">
+      <a href="#3871-le-jeune"><span class="cap">Previous</span>3871 Le Jeune Rd</a>
+      <a href="#projects" class="all">All projects</a>
+      <a href="#3871-le-jeune-ii" class="nx"><span class="cap">Next</span>3871 Le Jeune Rd II</a>
+    </nav>
+  </div>
+</div>
+<div class="pv" id="3871-le-jeune-ii" hidden>
+  <div class="wrap">
+    <a class="back" href="#projects">← All projects</a>
+    <div class="pv-h">
+      <span class="no">005 / 011</span>
+      <h1>3871 Le Jeune Rd II</h1>
+      <p class="pv-sub">Residential expansion — second story addition — Coral Gables, Miami</p>
+      <p class="pj-d">Architecture · Extensive Renovation</p>
+    </div>
+    <div class="pv-b"><p>A complete vertical transformation of an existing single-story residence. The project required full structural reconfiguration to support the new upper level, while maintaining architectural continuity throughout. The design integrates board-formed concrete, warm wood slat screens, and floor-to-ceiling glazing to create a sculptural two-story composition that opens seamlessly to the pool terrace and surrounding landscape.</p><dl><div><dt>Architecture</dt><dd>MET Studio</dd></div><div><dt>Bedrooms</dt><dd>5 + office</dd></div><div><dt>Bathrooms</dt><dd>7</dd></div></dl></div>
+    <div class="pv-imgs"><figure><img src="img/p/lj2-8.jpg" alt="3871 Le Jeune Rd II, view 1" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd II — 1 / 8</figcaption></figure><figure><img src="img/p/lj2-1.jpg" alt="3871 Le Jeune Rd II, view 2" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd II — 2 / 8</figcaption></figure><figure><img src="img/p/lj2-2.jpg" alt="3871 Le Jeune Rd II, view 3" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd II — 3 / 8</figcaption></figure><figure><img src="img/p/lj2-6.jpg" alt="3871 Le Jeune Rd II, view 4" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd II — 4 / 8</figcaption></figure><figure><img src="img/p/lj2-3.jpg" alt="3871 Le Jeune Rd II, view 5" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd II — 5 / 8</figcaption></figure><figure><img src="img/p/lj2-4.jpg" alt="3871 Le Jeune Rd II, view 6" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd II — 6 / 8</figcaption></figure><figure><img src="img/p/lj2-5.jpg" alt="3871 Le Jeune Rd II, view 7" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd II — 7 / 8</figcaption></figure><figure><img src="img/p/lj2-7.jpg" alt="3871 Le Jeune Rd II, view 8" loading="lazy"><figcaption class="cap">3871 Le Jeune Rd II — 8 / 8</figcaption></figure></div>
+    <nav class="pv-nav" aria-label="More projects">
+      <a href="#85-west-shore"><span class="cap">Previous</span>85 West Shore Dr</a>
+      <a href="#projects" class="all">All projects</a>
+      <a href="#3515-fairview" class="nx"><span class="cap">Next</span>3515 E Fairview St</a>
+    </nav>
+  </div>
+</div>
+<div class="pv" id="3515-fairview" hidden>
+  <div class="wrap">
+    <a class="back" href="#projects">← All projects</a>
+    <div class="pv-h">
+      <span class="no">006 / 011</span>
+      <h1>3515 E Fairview St</h1>
+      <p class="pv-sub">Renovation &amp; new addition — Coconut Grove, Miami</p>
+      <p class="pj-d">Architecture · Extensive Renovation</p>
+    </div>
+    <div class="pv-b"><p>Architectural design restructuring an existing house with a new addition into a 9,500 SF home with six bedrooms, eight baths, a gym, butler's pantry and covered parking for six cars, raised above the flood zone.</p><dl><div><dt>Architecture</dt><dd>MET Studio</dd></div><div><dt>Area</dt><dd>9,500 SF</dd></div><div><dt>Bed / Bath</dt><dd>6 / 8</dd></div></dl></div>
+    <div class="pv-imgs"><figure><img src="img/p/fv-3.jpg" alt="3515 E Fairview St, view 1" loading="lazy"><figcaption class="cap">3515 E Fairview St — 1 / 7</figcaption></figure><figure><img src="img/p/fv-2.jpg" alt="3515 E Fairview St, view 2" loading="lazy"><figcaption class="cap">3515 E Fairview St — 2 / 7</figcaption></figure><figure><img src="img/p/fv-4.jpg" alt="3515 E Fairview St, view 3" loading="lazy"><figcaption class="cap">3515 E Fairview St — 3 / 7</figcaption></figure><figure><img src="img/p/fv-7.jpg" alt="3515 E Fairview St, view 4" loading="lazy"><figcaption class="cap">3515 E Fairview St — 4 / 7</figcaption></figure><figure><img src="img/p/fv-6.jpg" alt="3515 E Fairview St, view 5" loading="lazy"><figcaption class="cap">3515 E Fairview St — 5 / 7</figcaption></figure><figure><img src="img/p/fv-5.jpg" alt="3515 E Fairview St, view 6" loading="lazy"><figcaption class="cap">3515 E Fairview St — 6 / 7</figcaption></figure><figure><img src="img/p/fv-1.jpg" alt="3515 E Fairview St, view 7" loading="lazy"><figcaption class="cap">3515 E Fairview St — 7 / 7</figcaption></figure></div>
+    <nav class="pv-nav" aria-label="More projects">
+      <a href="#3871-le-jeune-ii"><span class="cap">Previous</span>3871 Le Jeune Rd II</a>
+      <a href="#projects" class="all">All projects</a>
+      <a href="#3515-fairview-kitchen" class="nx"><span class="cap">Next</span>3515 E Fairview St Kitchen</a>
+    </nav>
+  </div>
+</div>
+<div class="pv" id="3515-fairview-kitchen" hidden>
+  <div class="wrap">
+    <a class="back" href="#projects">← All projects</a>
+    <div class="pv-h">
+      <span class="no">007 / 011</span>
+      <h1>3515 E Fairview St Kitchen</h1>
+      <p class="pv-sub">Custom kitchen millwork — Coconut Grove, Miami</p>
+      <p class="pj-d">Design, Fabrication &amp; Installation</p>
+    </div>
+    <div class="pv-b"><p>Design and fabrication of a custom contemporary kitchen, with integrated cabinetry, stone surfaces, built-in appliances and architectural lighting. The client chose the palette and finishes, while we developed the detailing and fabricated every piece for a cohesive, high-quality result.</p><dl><div><dt>Design &amp; Fabrication</dt><dd>MET Studio</dd></div></dl></div>
+    <div class="pv-imgs"><figure><img src="img/p/fv-k1.jpg" alt="3515 E Fairview St Kitchen, view 1" loading="lazy"><figcaption class="cap">3515 E Fairview St Kitchen — 1 / 6</figcaption></figure><figure><img src="img/p/fv-k2.jpg" alt="3515 E Fairview St Kitchen, view 2" loading="lazy"><figcaption class="cap">3515 E Fairview St Kitchen — 2 / 6</figcaption></figure><figure><img src="img/p/p29-1.jpg" alt="3515 E Fairview St Kitchen, view 3" loading="lazy"><figcaption class="cap">3515 E Fairview St Kitchen — 3 / 6</figcaption></figure><figure><img src="img/p/p29-2.jpg" alt="3515 E Fairview St Kitchen, view 4" loading="lazy"><figcaption class="cap">3515 E Fairview St Kitchen — 4 / 6</figcaption></figure><figure><img src="img/p/p29-3.jpg" alt="3515 E Fairview St Kitchen, view 5" loading="lazy"><figcaption class="cap">3515 E Fairview St Kitchen — 5 / 6</figcaption></figure><figure><img src="img/p/p29-4.jpg" alt="3515 E Fairview St Kitchen, view 6" loading="lazy"><figcaption class="cap">3515 E Fairview St Kitchen — 6 / 6</figcaption></figure></div>
+    <nav class="pv-nav" aria-label="More projects">
+      <a href="#3515-fairview"><span class="cap">Previous</span>3515 E Fairview St</a>
+      <a href="#projects" class="all">All projects</a>
+      <a href="#1916-sw-12" class="nx"><span class="cap">Next</span>1916 SW 12 Ave</a>
+    </nav>
+  </div>
+</div>
+<div class="pv" id="1916-sw-12" hidden>
+  <div class="wrap">
+    <a class="back" href="#projects">← All projects</a>
+    <div class="pv-h">
+      <span class="no">008 / 011</span>
+      <h1>1916 SW 12 Ave</h1>
+      <p class="pv-sub">Contemporary residence, proposal — Coral Gables, Miami</p>
+      <p class="pj-d">Architecture · New Construction</p>
+    </div>
+    <div class="pv-b"><p>A two-story residence with a rooftop terrace: stacked white volumes with warm timber cladding and dark bronze details, a cantilevered upper floor shading the entry, and a planted balcony wrapping the second level.</p><dl><div><dt>Architecture</dt><dd>MET Studio</dd></div></dl></div>
+    <div class="pv-imgs"><figure><img src="img/p/sw12-street.jpg" alt="1916 SW 12 Ave, view 1" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 1 / 12</figcaption></figure><figure><img src="img/p/sw12-aerial.jpg" alt="1916 SW 12 Ave, view 2" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 2 / 12</figcaption></figure><figure><img src="img/p/sw12-n8.jpg" alt="1916 SW 12 Ave, view 3" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 3 / 12</figcaption></figure><figure><img src="img/p/sw12-n7.jpg" alt="1916 SW 12 Ave, view 4" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 4 / 12</figcaption></figure><figure><img src="img/p/sw12-n6.jpg" alt="1916 SW 12 Ave, view 5" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 5 / 12</figcaption></figure><figure><img src="img/p/sw12-n5.jpg" alt="1916 SW 12 Ave, view 6" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 6 / 12</figcaption></figure><figure><img src="img/p/sw12-n3.jpg" alt="1916 SW 12 Ave, view 7" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 7 / 12</figcaption></figure><figure><img src="img/p/sw12-n1.jpg" alt="1916 SW 12 Ave, view 8" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 8 / 12</figcaption></figure><figure><img src="img/p/sw12-n4.jpg" alt="1916 SW 12 Ave, view 9" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 9 / 12</figcaption></figure><figure><img src="img/p/sw12-n2.jpg" alt="1916 SW 12 Ave, view 10" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 10 / 12</figcaption></figure><figure><img src="img/p/sw12-kitchen.jpg" alt="1916 SW 12 Ave, view 11" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 11 / 12</figcaption></figure><figure><img src="img/p/sw12-living.jpg" alt="1916 SW 12 Ave, view 12" loading="lazy"><figcaption class="cap">1916 SW 12 Ave — 12 / 12</figcaption></figure></div>
+    <nav class="pv-nav" aria-label="More projects">
+      <a href="#3515-fairview-kitchen"><span class="cap">Previous</span>3515 E Fairview St Kitchen</a>
+      <a href="#projects" class="all">All projects</a>
+      <a href="#11220-nw-43" class="nx"><span class="cap">Next</span>11220 NW 43 Ter</a>
+    </nav>
+  </div>
+</div>
+<div class="pv" id="11220-nw-43" hidden>
+  <div class="wrap">
+    <a class="back" href="#projects">← All projects</a>
+    <div class="pv-h">
+      <span class="no">009 / 011</span>
+      <h1>11220 NW 43 Ter</h1>
+      <p class="pv-sub">Custom vanity millwork &amp; stone work — Doral, Miami</p>
+      <p class="pj-d">Design, Fabrication &amp; Installation</p>
+    </div>
+    <div class="pv-b"><p>A master bathroom vanity in soft-touch porcelain with integrated basins and continuous veining, custom walnut millwork and gunmetal plumbing fixtures.</p></div>
+    <div class="pv-imgs"><figure><img src="img/p/p28-2.jpg" alt="11220 NW 43 Ter, view 1" loading="lazy"><figcaption class="cap">11220 NW 43 Ter — 1 / 3</figcaption></figure><figure><img src="img/p/p28-1.jpg" alt="11220 NW 43 Ter, view 2" loading="lazy"><figcaption class="cap">11220 NW 43 Ter — 2 / 3</figcaption></figure><figure><img src="img/p/p28-3.jpg" alt="11220 NW 43 Ter, view 3" loading="lazy"><figcaption class="cap">11220 NW 43 Ter — 3 / 3</figcaption></figure></div>
+    <nav class="pv-nav" aria-label="More projects">
+      <a href="#1916-sw-12"><span class="cap">Previous</span>1916 SW 12 Ave</a>
+      <a href="#projects" class="all">All projects</a>
+      <a href="#park-grove" class="nx"><span class="cap">Next</span>Park Grove Residences</a>
+    </nav>
+  </div>
+</div>
+<div class="pv" id="park-grove" hidden>
+  <div class="wrap">
+    <a class="back" href="#projects">← All projects</a>
+    <div class="pv-h">
+      <span class="no">010 / 011</span>
+      <h1>Park Grove Residences</h1>
+      <p class="pv-sub">Master bathroom design — Coconut Grove, Miami</p>
+      <p class="pj-d">Interior Design</p>
+    </div>
+    <div class="pv-b"><p>A master bathroom wrapped floor to wall in grey stone with warm veining. A floating walnut double vanity with a thick stone top and undermount basins sits beneath backlit brass-framed mirrors, flanked by brass wall sconces, with brushed brass fixtures and a full-height walnut storage wall with lit open shelving.</p><dl><div><dt>Interior Design</dt><dd>MET Studio</dd></div></dl></div>
+    <div class="pv-imgs"><figure><img src="img/p/pg-1.jpg" alt="Park Grove Residences, view 1" loading="lazy"><figcaption class="cap">Park Grove Residences — 1 / 3</figcaption></figure><figure><img src="img/p/pg-2.jpg" alt="Park Grove Residences, view 2" loading="lazy"><figcaption class="cap">Park Grove Residences — 2 / 3</figcaption></figure><figure><img src="img/p/pg-3.jpg" alt="Park Grove Residences, view 3" loading="lazy"><figcaption class="cap">Park Grove Residences — 3 / 3</figcaption></figure></div>
+    <nav class="pv-nav" aria-label="More projects">
+      <a href="#11220-nw-43"><span class="cap">Previous</span>11220 NW 43 Ter</a>
+      <a href="#projects" class="all">All projects</a>
+      <a href="#guaparo" class="nx"><span class="cap">Next</span>Guaparo Residence</a>
+    </nav>
+  </div>
+</div>
+<div class="pv" id="guaparo" hidden>
+  <div class="wrap">
+    <a class="back" href="#projects">← All projects</a>
+    <div class="pv-h">
+      <span class="no">011 / 011</span>
+      <h1>Guaparo Residence</h1>
+      <p class="pv-sub">Contemporary residence, proposal — Valencia, Venezuela</p>
+      <p class="pj-d">Architecture · New Construction</p>
+    </div>
+    <div class="pv-b"><p>A custom residence organized around a central pool courtyard, combining exposed concrete, natural stone, wood screening, wide glazing and double-height spaces.</p></div>
+    <div class="pv-imgs"><figure><img src="img/p/p33-1.jpg" alt="Guaparo Residence, view 1" loading="lazy"><figcaption class="cap">Guaparo Residence — 1 / 4</figcaption></figure><figure><img src="img/p/p33-2.jpg" alt="Guaparo Residence, view 2" loading="lazy"><figcaption class="cap">Guaparo Residence — 2 / 4</figcaption></figure><figure><img src="img/p/p33-3.jpg" alt="Guaparo Residence, view 3" loading="lazy"><figcaption class="cap">Guaparo Residence — 3 / 4</figcaption></figure><figure><img src="img/p/guaparo-aerial.jpg" alt="Guaparo Residence, view 4" loading="lazy"><figcaption class="cap">Guaparo Residence — 4 / 4</figcaption></figure></div>
+    <nav class="pv-nav" aria-label="More projects">
+      <a href="#park-grove"><span class="cap">Previous</span>Park Grove Residences</a>
+      <a href="#projects" class="all">All projects</a>
+      <a href="#13155-keystone" class="nx"><span class="cap">Next</span>13155 Keystone Ter</a>
+    </nav>
+  </div>
+</div>
+<!-- /project views -->
+<footer><div class="wrap grid"><span>© 2026 MET Studio. All Rights Reserved.</span><span>Miami, FL</span></div></footer>
+
+<script>
+document.getElementById('cf').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=e.target,n=document.getElementById('c-name').value.trim(),m=document.getElementById('c-email').value.trim(),note=document.getElementById('c-note'),es=document.documentElement.lang==='es';
+  note.hidden=false;
+  if(!n||!/.+@.+\..+/.test(m)){note.textContent=es?'Por favor agrega tu nombre y correo.':'Please add your name and email.';return;}
+  var btn=f.querySelector('button[type=submit]');btn.disabled=true;
+  note.textContent=es?'Enviando…':'Sending…';
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+  .then(function(r){if(!r.ok) throw 0; f.reset(); note.textContent=es?('Gracias, '+n.split(' ')[0]+'. Recibimos tu consulta y te responderemos pronto.'):('Thank you, '+n.split(' ')[0]+'. We received your enquiry and will be in touch soon.');})
+  .catch(function(){note.textContent=es?'No se pudo enviar. Escríbenos a gabriel@metstudio.us.':'It could not be sent. Please email gabriel@metstudio.us.';})
+  .finally(function(){btn.disabled=false;});
+});
+
+document.querySelectorAll('.filters .f').forEach(function(b){
+  b.addEventListener('click',function(){
+    var f=b.dataset.f;
+    document.querySelectorAll('.filters .f').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('#projects [data-cat]').forEach(function(el){
+      el.hidden = f!=='all' && el.dataset.cat.split(' ').indexOf(f)<0;
+    });
+  });
+});
+
+(function(){
+  var main=document.getElementById('top');
+  function route(){
+    var h=decodeURIComponent(location.hash.slice(1));
+    var v=h&&document.getElementById(h);
+    var isView=v&&v.classList.contains('pv');
+    document.querySelectorAll('.pv').forEach(function(x){x.hidden=(x!==v)});
+    main.hidden=!!isView;
+    if(isView){window.scrollTo(0,0);document.title=(v.id==='team'?'Who we are':v.querySelector('h1').textContent)+' — MET Studio';}
+    else{document.title='MET Studio';if(v)v.scrollIntoView();}
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#"]');if(!a)return;
+    var id=a.getAttribute('href').slice(1);var t=id&&document.getElementById(id);if(!t)return;
+    e.preventDefault();
+    try{history.pushState(null,'','#'+id)}catch(err){}
+    route();
+  });
+  window.addEventListener('hashchange',route);
+  window.addEventListener('popstate',route);
+  route();
+})();
+
+(function(){
+  var ES={"In progress": "En proceso", "Right now at the studio": "Ahora mismo en el estudio", "Project in progress": "Proyecto en proceso", "Design Stage": "Etapa de Diseño", "We are currently developing the design for this Pinecrest residence. Follow along as the project moves from the existing house to a new vision.": "Actualmente estamos desarrollando el diseño de esta residencia en Pinecrest. Sigue el proyecto mientras pasa de la casa existente a una nueva visión.", "REC · LIVE": "REC · EN VIVO", "Aerial view of the existing residence at 6201 SW 120th Ave, Pinecrest": "Vista aérea de la residencia existente en 6201 SW 120th Ave, Pinecrest","Menu":"Menú","Senior Interior Designer":"Diseñador de Interiores Senior","Senior Designer":"Diseñador Senior","Master bathroom design": "Diseño de baño principal", "A master bathroom wrapped floor to wall in grey stone with warm veining. A floating walnut double vanity with a thick stone top and undermount basins sits beneath backlit brass-framed mirrors, flanked by brass wall sconces, with brushed brass fixtures and a full-height walnut storage wall with lit open shelving.": "Un baño principal revestido de piso a pared en piedra gris con vetas cálidas. Un vanity doble flotante en nogal con una gruesa cubierta de piedra y lavamanos bajo cubierta se ubica bajo espejos retroiluminados con marco de latón, flanqueados por apliques de latón, con griferías en latón cepillado y una pared de almacenamiento en nogal de piso a techo con repisas iluminadas.","View project →": "Ver proyecto →", "Project slideshow": "Presentación de proyectos", "Previous project": "Proyecto anterior", "Next project": "Proyecto siguiente","Renovation & new addition": "Remodelación y ampliación", "Architectural design restructuring an existing house with a new addition into a 9,500 SF home with six bedrooms, eight baths, a gym, butler's pantry and covered parking for six cars, raised above the flood zone.": "Diseño arquitectónico que reestructura una casa existente con una nueva ampliación, resultando en una vivienda de 9,500 SF con seis habitaciones, ocho baños, gimnasio, despensa de servicio y estacionamiento techado para seis autos, elevada sobre la zona inundable.", "Custom kitchen millwork": "Carpintería de cocina a medida", "Design and fabrication of a custom contemporary kitchen, with integrated cabinetry, stone surfaces, built-in appliances and architectural lighting. The client chose the palette and finishes, while we developed the detailing and fabricated every piece for a cohesive, high-quality result.": "Diseño y fabricación de una cocina contemporánea a medida, con gabinetes integrados, superficies de piedra, electrodomésticos empotrados e iluminación arquitectónica. El cliente eligió la paleta y los acabados, mientras nosotros desarrollamos los detalles y fabricamos cada pieza para un resultado cohesivo y de alta calidad.", "Design & Fabrication": "Diseño y Fabricación","Bath Fixtures": "Accesorios de Baño", "Flush-Mount Systems": "Sistemas Empotrados al Ras","Brands": "Marcas", "Partners & suppliers": "Aliados y proveedores", "Brands we work with.": "Marcas con las que trabajamos.", "We specify, coordinate and install pieces from some of the finest makers in furniture, kitchens, closets, lighting and fixtures.": "Especificamos, coordinamos e instalamos piezas de algunos de los mejores fabricantes de mobiliario, cocinas, closets, iluminación y griferías.", "Furniture": "Mobiliario", "Closets & Kitchens": "Closets y Cocinas", "Kitchens & Baths": "Cocinas y Baños", "Closets": "Closets", "Doors & Partitions": "Puertas y Divisiones", "Lighting": "Iluminación", "Architectural Lighting": "Iluminación Arquitectónica", "Plumbing Fixtures": "Griferías","We offer Design Consultation for Owners, Designers and Builders.": "Ofrecemos Consultoría de Diseño para Propietarios, Diseñadores y Constructores.", "We help choose every fixture, finish and piece of furniture so it looks right, works right and fits each project.": "Ayudamos a elegir cada pieza, acabado y mueble para que se vea bien, funcione bien y vaya con cada proyecto.", "Wall Finishes Design Consultation": "Consultoría de Diseño de Acabados de Pared", "Guidance in choosing wall finishes, from plaster and paint to stone, wood and paneling, with samples and options presented for each space.": "Asesoría para elegir los acabados de pared, desde estucos y pintura hasta piedra, madera y revestimientos, con muestras y opciones para cada espacio.", "Furniture Selection": "Selección de Mobiliario", "An experienced eye for choosing the right pieces for each project, balancing scale, materials and comfort so every room feels complete.": "Un ojo experto para elegir las piezas adecuadas para cada proyecto, equilibrando escala, materiales y confort para que cada espacio se sienta completo.","MET Studio, home": "MET Studio, inicio", "Main": "Principal", "Projects": "Proyectos", "Management": "Gerencia", "Consulting": "Consultoría", "Method": "Método", "Who we are": "Quiénes somos", "Contact": "Contacto", "Start a project": "Iniciar un proyecto", "Architecture, Interior Design and extensive renovations,": "Arquitectura, Diseño Interior y remodelaciones integrales,", "drawn and built": "diseñadas y construidas", "by one studio.": "por un solo estudio.", "Miami, Florida": "Miami, Florida", "Disciplines": "Disciplinas", "Architecture, Extensive Interior & Exterior Renovations, Interiors,": "Arquitectura, Remodelaciones Integrales Interiores y Exteriores, Interiorismo,", "Project Management": "Gerencia de Proyectos", "Work": "Proyectos", "Private residences, $6–45MM": "Residencias privadas, $6–45MM", "Enquiries": "Consultas", "Book a site visit →": "Agendar una visita →", "Studio": "Estudio", "About MET Studio": "Sobre MET Studio", "Meet the team →": "Conoce al equipo →", "MET Studio designs and builds private homes in South Florida.": "MET Studio diseña y construye residencias privadas en el sur de Florida.", "We draw the plans, write the finish schedule, and run the site ourselves, so the details in the render are the details on the wall.": "Dibujamos los planos, definimos el cuadro de acabados y dirigimos la obra nosotros mismos, para que los detalles del render sean los detalles construidos.", "Architecture": "Arquitectura", "New residences, additions and complete re-plans. Façades, renders and permit drawings, designed with flood-zone conditions in mind.": "Residencias nuevas, ampliaciones y redistribuciones completas. Fachadas, renders y planos para permisos, diseñados considerando las condiciones de zona inundable.", "Renovation": "Remodelación", "Structure, MEP coordination, millwork and finishes, managed on site daily from submittals to the final punch list.": "Estructura, coordinación MEP, carpintería y acabados, gestionados a diario en obra desde los submittals hasta la lista final de pendientes.", "Interiors": "Interiorismo", "Extensive experience with very high-end finishes, including stone work, millwork, and plumbing and electrical fixtures. We consult from concept to final installation.": "Amplia experiencia en acabados de muy alta gama, incluyendo trabajos en piedra, carpintería, y griferías y luminarias. Asesoramos desde el concepto hasta la instalación final.", "On-site project management for designers and contractors: we run the schedule, the trades and the paperwork so their design gets built as drawn.": "Gerencia de proyectos en obra para diseñadores y contratistas: manejamos el cronograma, los oficios y la documentación para que su diseño se construya tal como fue dibujado.", "Filter projects": "Filtrar proyectos", "All": "Todos", "Architecture – New Construction": "Arquitectura – Obra Nueva", "Architecture – Extensive Renovation": "Arquitectura – Remodelación Integral", "Design & Fabrication": "Diseño y Fabricación", "No.": "N.º", "Address": "Dirección", "Project": "Proyecto", "Location": "Ubicación", "Exterior & interior renovation": "Remodelación exterior e interior", "Interior renovation": "Remodelación interior", "Exterior & interior renovation, proposal": "Remodelación exterior e interior, propuesta", "Contemporary single-family residence": "Residencia unifamiliar contemporánea", "Residential expansion — second story addition": "Ampliación residencial — segundo piso", "Renovation, new addition & kitchen millwork": "Remodelación, ampliación y carpintería de cocina", "Contemporary residence, proposal": "Residencia contemporánea, propuesta", "Custom vanity millwork & stone work": "Vanity a medida en carpintería y piedra", "Architecture · Extensive Renovation": "Arquitectura · Remodelación Integral", "Architecture · Extensive Renovation · Design, Fabrication & Installation": "Arquitectura · Remodelación Integral · Diseño, Fabricación e Instalación", "Architecture · New Construction": "Arquitectura · Obra Nueva", "Design, Fabrication & Installation": "Diseño, Fabricación e Instalación", "For designers and contractors": "Para diseñadores y contratistas", "We provide Construction Management for Designers, Architects and Contractors.": "Ofrecemos Gerencia de Construcción para Diseñadores, Arquitectos y Contratistas.", "We are on site 100% of the time, as the single point of coordination between the client and the trades, so the approved design is what gets built.": "Estamos en obra el 100% del tiempo, como punto único de coordinación entre el cliente y los oficios, para que se construya exactamente el diseño aprobado.", "From preconstruction to turnover: scope, budgets, schedules, procurement and subcontractor buyout, then daily coordination of the trades, cost tracking and change orders.": "Desde la preconstrucción hasta la entrega: alcance, presupuestos, cronogramas, compras y contratación de subcontratistas, y luego coordinación diaria de los oficios, control de costos y órdenes de cambio.", "Construction Administration": "Administración de Obra", "Submittals, RFIs, change orders, schedule and cost control within a design-build model, with one point of accountability.": "Submittals, RFIs, órdenes de cambio, control de cronograma y costos dentro de un modelo de diseño y construcción, con un solo responsable.", "Quality Control": "Control de Calidad", "Material and submittal review, mockup approvals, inspections at key stages and system testing, through to the final punch list.": "Revisión de materiales y submittals, aprobación de muestras, inspecciones en etapas clave y pruebas de sistemas, hasta la lista final de pendientes.", "Layout & Millwork Design": "Distribución y Diseño de Carpintería", "Space plans and custom millwork with full shop drawings for cabinetry, closets, wall paneling and built-ins, coordinated with finishes, appliances and lighting.": "Planos de distribución y carpintería a medida con planos de taller completos para gabinetes, closets, revestimientos de pared y muebles empotrados, coordinados con acabados, electrodomésticos e iluminación.", "MEP Coordination": "Coordinación MEP", "MEP specifications prepared with vendors and subcontractors, so every installation is done right the first time.": "Especificaciones MEP preparadas con proveedores y subcontratistas, para que cada instalación quede bien desde la primera vez.", "Experience": "Experiencia", "Up to 30 subcontractors coordinated at once on projects from $1.2MM to $35MM.": "Hasta 30 subcontratistas coordinados a la vez en proyectos de $1.2MM a $35MM.", "Who we work with": "Con quién trabajamos", "Owners": "Propietarios", "Investors": "Inversionistas", "Developers": "Desarrolladores", "Architects": "Arquitectos", "Interior Designers": "Diseñadores de Interiores", "General Contractors": "Contratistas Generales", "Design Consulting": "Consultoría de Diseño", "Plumbing & Electrical": "Plomería y Electricidad", "We offer Plumbing & Electrical Design Consultation for Owners, Designers and Builders.": "Ofrecemos Consultoría de Diseño de Plomería y Electricidad para Propietarios, Diseñadores y Constructores.", "We help choose and place every fixture so it looks right, works right and installs correctly the first time.": "Ayudamos a elegir y ubicar cada pieza para que se vea bien, funcione bien y se instale correctamente desde la primera vez.", "Plumbing Design Consultation": "Consultoría de Diseño de Plomería", "Fixture selection, finishes and layouts for kitchens and baths, matched to the design and to how each space will be used.": "Selección de griferías, acabados y distribución para cocinas y baños, de acuerdo al diseño y al uso de cada espacio.", "Electrical & Lighting Design Consultation": "Consultoría de Diseño Eléctrico e Iluminación", "Lighting layouts, fixture selection, switching and outlet placement planned around the architecture and the furniture.": "Planos de iluminación, selección de luminarias, interruptores y tomacorrientes planificados según la arquitectura y el mobiliario.", "Technical Coordination": "Coordinación Técnica", "Specifications reviewed with suppliers and installers so rough-in locations and dimensions are right before walls are closed.": "Especificaciones revisadas con proveedores e instaladores para que las ubicaciones y medidas de las preinstalaciones sean correctas antes de cerrar las paredes.", "Concept to Installation": "Del Concepto a la Instalación", "Support from the first selections through final installation, so the finished result matches what was approved.": "Acompañamiento desde las primeras selecciones hasta la instalación final, para que el resultado coincida con lo aprobado.", "Five stages": "Cinco etapas", "Visit": "Visita", "We walk the property and agree scope, budget and goals.": "Recorremos la propiedad y acordamos alcance, presupuesto y objetivos.", "Design": "Diseño", "Plans, elevations and renders, refined with you.": "Planos, elevaciones y renders, ajustados contigo.", "Specify": "Especificar", "Finish schedule, MEP, permits and shop drawings.": "Cuadro de acabados, MEP, permisos y planos de taller.", "Build": "Construir", "Daily site supervision and weekly reports.": "Supervisión diaria en obra y reportes semanales.", "Deliver": "Entregar", "Punch list, walk-through and handover.": "Lista de pendientes, recorrido final y entrega.", "New projects": "Nuevos proyectos", "Tell us about": "Cuéntanos sobre", "your project.": "tu proyecto.", "Name": "Nombre", "Email": "Correo", "Service": "Servicio", "Interior Design": "Diseño Interior", "Complete Project": "Proyecto Completo", "Send enquiry": "Enviar consulta", "← Home": "← Inicio", "MET Studio brings Architects, Designers and Construction Management under one roof.": "MET Studio reúne Arquitectos, Diseñadores y Gerencia de Construcción bajo un mismo techo.", "The same team draws the plans, renders the spaces and runs the site, from the first sketch to the last finish.": "El mismo equipo dibuja los planos, visualiza los espacios y dirige la obra, desde el primer boceto hasta el último acabado.", "Senior Architect & Interior Designer": "Arquitecto Senior y Diseñador de Interiores", "Architecture & Project Management": "Arquitectura y Gerencia de Proyectos", "A graduate of the Faculty of Architecture at the Central University of Venezuela in Caracas, Gabriel has a deep background in Architecture and Urban Planning and has focused on Residential Architecture and Construction for the last 20 years, with extensive experience in large-scale millwork manufacturing and installation for some of the most prestigious real estate developers.": "Egresado de la Facultad de Arquitectura de la Universidad Central de Venezuela en Caracas, Gabriel cuenta con una sólida formación en Arquitectura y Urbanismo y se ha enfocado en la Arquitectura y Construcción Residencial durante los últimos 20 años, con amplia experiencia en fabricación e instalación de carpintería a gran escala para algunas de las desarrolladoras inmobiliarias más prestigiosas.", "He bridges Design and Construction, guiding each project from early planning to final handover as the single point of contact between client and builders, and makes sure every detail is built as designed, on schedule and to the highest standard.": "Une el Diseño y la Construcción, guiando cada proyecto desde la planificación inicial hasta la entrega final como punto único de contacto entre el cliente y los constructores, y se asegura de que cada detalle se construya según el diseño, a tiempo y con el más alto estándar.", "Interiors & Materials Selection": "Interiorismo y Selección de Materiales", "Nathalia is an Architectural Designer with over six years of experience shaping residential and commercial spaces, with a focus on interiors. Raised in Caracas, Venezuela, she creates spaces rich in texture and character, where beauty and function work together.": "Nathalia es Diseñadora Arquitectónica con más de seis años de experiencia creando espacios residenciales y comerciales, con enfoque en interiores. Criada en Caracas, Venezuela, crea espacios ricos en textura y carácter, donde la belleza y la función trabajan juntas.", "She leads Space Planning, Material Selection and Design Development, working closely with vendors and builders so every space is carefully resolved from concept to completion.": "Lidera la Planificación de Espacios, la Selección de Materiales y el Desarrollo del Diseño, trabajando de cerca con proveedores y constructores para que cada espacio quede cuidadosamente resuelto desde el concepto hasta su terminación.", "Senior Architect": "Arquitecto Senior", "Architecture & Pre-Construction": "Arquitectura y Preconstrucción", "Trained as an architect at the Central University of Venezuela's Faculty of Architecture in Caracas, Damian brings extensive experience in Residential Architecture and Project Management, guiding homes from design through the start of construction.": "Formado como arquitecto en la Facultad de Arquitectura de la Universidad Central de Venezuela en Caracas, Damián aporta amplia experiencia en Arquitectura Residencial y Gerencia de Proyectos, guiando viviendas desde el diseño hasta el inicio de la construcción.", "He specializes in MEP Pre-Conceptualization and Pre-Construction, planning mechanical, electrical and plumbing systems from the earliest design stages so every project moves into construction well coordinated and ready to build.": "Se especializa en Preconceptualización MEP y Preconstrucción, planificando los sistemas mecánicos, eléctricos y de plomería desde las primeras etapas del diseño para que cada proyecto llegue a obra bien coordinado y listo para construir.", "3D Modeling, CGI Visualization & AI Conceptualization": "Modelado 3D, Visualización CGI y Conceptualización con IA", "Ernesto leads the studio's 3D Modeling and Visualization phase, turning plans into detailed digital models and photorealistic CGI renderings of every space. He earned his degree at the Faculty of Architecture of the Central University of Venezuela in Caracas.": "Ernesto lidera la fase de Modelado 3D y Visualización del estudio, convirtiendo los planos en modelos digitales detallados y renders CGI fotorrealistas de cada espacio. Obtuvo su título en la Facultad de Arquitectura de la Universidad Central de Venezuela en Caracas.", "Using AI Conceptualization to explore design options quickly, he helps clients see and refine their project before construction begins, so every decision is made with confidence.": "Usando Conceptualización con IA para explorar opciones de diseño rápidamente, ayuda a los clientes a ver y ajustar su proyecto antes de comenzar la obra, para que cada decisión se tome con confianza.", "← All projects": "← Todos los proyectos", "Extensive renovation in Keystone Islands: new subfloor layers, a re-planned partition layout with new framing, Venetian plaster, white oak floors and custom millwork in every room. Custom closets, furniture and architectural lighting were coordinated throughout.": "Remodelación integral en Keystone Islands: nuevas capas de subpiso, redistribución de tabiquería con nueva estructura, estuco veneciano, pisos de roble blanco y carpintería a medida en cada ambiente. Closets a medida, mobiliario e iluminación arquitectónica coordinados en toda la casa.", "General Contractor": "Contratista General", "Interior Designer": "Diseñador de Interiores", "More projects": "Más proyectos", "Previous": "Anterior", "All projects": "Todos los proyectos", "Next": "Siguiente", "An extensive renovation with a complete redesign of the layout, adding more bedrooms to the property. Large-format stone slab walls with bold veining, walnut wall paneling and a vertical slat screen frame the new living and dining areas, with linear recessed lighting and polished stone floors throughout. The open plan connects to a planted garden through a full-height slatted opening.": "Una remodelación integral con un rediseño completo de la distribución, agregando más habitaciones a la propiedad. Muros de losas de piedra de gran formato con vetas marcadas, revestimiento de nogal y una celosía vertical enmarcan las nuevas áreas de sala y comedor, con iluminación lineal empotrada y pisos de piedra pulida en todo el espacio. La planta abierta se conecta con un jardín a través de una abertura de celosía de doble altura.", "A complete transformation of an existing house: new layout, new finishes throughout, and a new exterior on every façade. Stone paving and wood decking around the pool, and a pergola over a new barbecue area.": "Una transformación completa de una casa existente: nueva distribución, nuevos acabados en todos los espacios y un nuevo exterior en cada fachada. Pavimento de piedra y deck de madera alrededor de la piscina, y una pérgola sobre una nueva área de parrilla.", "A contemporary residence composed of crisp white volumes framing warm wood paneling. A double-height wood entry door sits beside a vertical slat screen, the ground floor is clad in natural stone with clerestory windows, and a glass-railed balcony opens the upper level to the garden. Large-format pavers set in lawn lead through layered tropical landscaping to the entry.": "Una residencia contemporánea compuesta por volúmenes blancos que enmarcan revestimientos de madera cálida. Una puerta de entrada de madera de doble altura junto a una celosía vertical, la planta baja revestida en piedra natural con ventanas altas y un balcón con baranda de vidrio que abre el nivel superior al jardín. Losas de gran formato sobre césped conducen a la entrada entre un paisajismo tropical.", "A complete vertical transformation of an existing single-story residence. The project required full structural reconfiguration to support the new upper level, while maintaining architectural continuity throughout. The design integrates board-formed concrete, warm wood slat screens, and floor-to-ceiling glazing to create a sculptural two-story composition that opens seamlessly to the pool terrace and surrounding landscape.": "Una transformación vertical completa de una residencia existente de un piso. El proyecto requirió una reconfiguración estructural total para soportar el nuevo nivel superior, manteniendo la continuidad arquitectónica en todo momento. El diseño integra concreto con textura de encofrado de madera, celosías de madera cálida y ventanales de piso a techo para crear una composición escultural de dos pisos que se abre a la terraza de la piscina y al paisaje.", "Bedrooms": "Habitaciones", "5 + office": "5 + oficina", "Bathrooms": "Baños", "Architectural design restructuring an existing house with a new addition into a 9,500 SF home with six bedrooms, eight baths, a gym, butler's pantry and covered parking for six cars, raised above the flood zone. We also designed, fabricated and installed the custom kitchen.": "Diseño arquitectónico que reestructura una casa existente con una nueva ampliación, resultando en una vivienda de 9,500 SF con seis habitaciones, ocho baños, gimnasio, despensa de servicio y estacionamiento techado para seis autos, elevada sobre la zona inundable. También diseñamos, fabricamos e instalamos la cocina a medida.", "Area": "Área", "Bed / Bath": "Hab. / Baños", "A two-story residence with a rooftop terrace: stacked white volumes with warm timber cladding and dark bronze details, a cantilevered upper floor shading the entry, and a planted balcony wrapping the second level.": "Una residencia de dos pisos con terraza en la azotea: volúmenes blancos superpuestos con revestimiento de madera cálida y detalles en bronce oscuro, un piso superior en voladizo que da sombra a la entrada y un balcón con vegetación que envuelve el segundo nivel.", "A master bathroom vanity in soft-touch porcelain with integrated basins and continuous veining, custom walnut millwork and gunmetal plumbing fixtures.": "Un vanity para baño principal en porcelanato soft-touch con lavamanos integrados y veta continua, carpintería a medida en nogal y griferías en acabado gunmetal.", "A custom residence organized around a central pool courtyard, combining exposed concrete, natural stone, wood screening, wide glazing and double-height spaces.": "Una residencia a medida organizada alrededor de un patio central con piscina, que combina concreto expuesto, piedra natural, celosías de madera, amplios ventanales y espacios de doble altura.", "© 2026 MET Studio. All Rights Reserved.": "© 2026 MET Studio. Todos los derechos reservados.", "Miami, FL": "Miami, FL", "Please add your name and email.": "Por favor agrega tu nombre y correo."};
+  var RX=[[/^View project · (\d+) images →$/,'Ver proyecto · $1 imágenes →'],[/^(\d+) projects, Miami and Venezuela$/,'$1 proyectos, Miami y Venezuela'],[/^(.+), view (\d+)$/,'$1, vista $2']];
+  var orig=new WeakMap(), origAttr=new WeakMap();
+  function tr(t){var k=t.replace(/\s+/g,' ').trim(); if(!k) return null; if(ES[k]!=null) return ES[k]; for(var i=0;i<RX.length;i++){if(RX[i][0].test(k)) return k.replace(RX[i][0],RX[i][1]);} return null;}
+  function apply(lang){
+    var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode&&n.parentNode.nodeName;if(p==='SCRIPT'||p==='STYLE') return 2; return (n.parentNode.closest&&n.parentNode.closest('[translate="no"]'))?2:1;}});
+    var n; while((n=w.nextNode())){
+      if(!orig.has(n)) orig.set(n,n.nodeValue);
+      var en=orig.get(n);
+      if(lang==='es'){var t=tr(en); if(t!=null){var m=en.match(/^(\s*)[\s\S]*?(\s*)$/); n.nodeValue=m[1]+t+m[2];}}
+      else n.nodeValue=en;
+    }
+    document.querySelectorAll('[placeholder],[aria-label],[alt]').forEach(function(el){
+      ['placeholder','aria-label','alt'].forEach(function(a){
+        if(!el.hasAttribute(a)) return;
+        var store=origAttr.get(el)||{}; if(!(a in store)){store[a]=el.getAttribute(a); origAttr.set(el,store);}
+        var en=store[a]; var t=lang==='es'?tr(en):null; el.setAttribute(a,t!=null?t:en);
+      });
+    });
+    document.documentElement.lang=lang;
+    document.querySelectorAll('.lsw .lb').forEach(function(b){var on=b.dataset.l===lang;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false');});
+    try{localStorage.setItem('met-lang',lang)}catch(e){}
+  }
+  document.querySelectorAll('.lsw .lb').forEach(function(b){b.addEventListener('click',function(){apply(b.dataset.l)});});
+  var saved='en'; try{saved=localStorage.getItem('met-lang')||'en'}catch(e){}
+  if(saved==='es') apply('es');
+})();
+
+(function(){
+  var box=document.getElementById('reelbox'); if(!box) return;
+  var sl=box.querySelectorAll('.slide'), dt=box.querySelectorAll('.dotb'), i=0, t=null;
+  var still=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(n){i=(n+sl.length)%sl.length;sl.forEach(function(s,k){var on=k===i;s.classList.toggle('on',on);s.setAttribute('aria-hidden',on?'false':'true');s.tabIndex=on?0:-1;});dt.forEach(function(d,k){d.classList.toggle('on',k===i);d.setAttribute('aria-current',k===i?'true':'false');});}
+  function play(){stop(); if(!still) t=setInterval(function(){go(i+1)},5000);}
+  function stop(){if(t){clearInterval(t);t=null;}}
+  document.getElementById('rprev').addEventListener('click',function(){go(i-1);play();});
+  document.getElementById('rnext').addEventListener('click',function(){go(i+1);play();});
+  dt.forEach(function(d){d.addEventListener('click',function(){go(+d.dataset.i);play();});});
+  box.addEventListener('mouseenter',stop); box.addEventListener('mouseleave',play);
+  box.addEventListener('focusin',stop); box.addEventListener('focusout',play);
+  document.addEventListener('visibilitychange',function(){document.hidden?stop():play();});
+  go(0); play();
+})();
+
+(function(){
+  var h=document.querySelector('header'), b=document.getElementById('mbtn'); if(!h||!b) return;
+  function set(o){h.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');}
+  b.addEventListener('click',function(){set(!h.classList.contains('open'));});
+  document.getElementById('mainnav').addEventListener('click',function(e){if(e.target.closest('a')) set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&h.classList.contains('open')){set(false);b.focus();}});
+})();
+</script>
+</body>
+</html>
